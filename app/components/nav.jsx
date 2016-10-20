@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {Link, IndexLink} from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
 export default class Nav extends Component {
    activeClass(routeName) {

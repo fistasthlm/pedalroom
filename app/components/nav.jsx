@@ -9,8 +9,12 @@ export default class Nav extends Component {
    render() {
       return (
          <div className="nav-content">
-            <div className="left-div" />
-            <div className="right-div" />
+            <div className="left-div">
+               <img className="logo" src="../fistasthlm-logotype.png" />
+            </div>
+            <div className="right-div">
+               <img className="logo" src="../fistasthlm-logotype.png" />
+            </div>
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">
                   <ul className="nav navbar-nav">

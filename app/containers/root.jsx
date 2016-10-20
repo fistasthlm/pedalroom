@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 class Root extends Component {
    render() {
       return(
-         <div></div>
+         <div className="content-container">
+
+         </div>
       )
    }
 }

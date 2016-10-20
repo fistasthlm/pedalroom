@@ -4,9 +4,7 @@ import {connect} from 'react-redux';
 class Root extends Component {
    render() {
       return(
-         <div>
-            yolo! :D
-         </div>
+         <div></div>
       )
    }
 }

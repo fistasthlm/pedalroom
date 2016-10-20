@@ -15,9 +15,6 @@ exports.config = {
          presets: ['es2015', 'react'],
          pattern: /\.(es6|jsx|js)$/
       },
-      sass: {
-         modules: true
-      }
    },
 
    files: {

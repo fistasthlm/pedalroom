@@ -7,9 +7,7 @@ body {
   height: 100%;
   overflow: hidden;
   display: block;
-  background-image: url(../fistasthlm-bg1.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: url(../fistasthlm-bg1.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,5 +22,5 @@ body {
   width: 50%;
   height: 2000px;
   z-index: 2;
-  opacity: 0.9;
+  opacity: 0.95;
 }

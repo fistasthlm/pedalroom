@@ -1,0 +1,42 @@
+.nav-content {
+  padding: 20px;
+
+  .left-div {
+    float: left !important;
+    width: 35%;
+    display: inline-block;
+    height: 20px;
+  }
+
+  .right-div {
+    float: right !important;
+    width: 35%;
+    display: inline-block;
+    height: 20px;
+  }
+
+  .navbar-center {
+    float: none;
+    display: inline-block;
+    max-width: 30%;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar-nav > li > a {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+
+    &.main-nav-item {
+      font-size: 20px;
+    }
+  }
+
+  .current-page-item {
+    background-color: #5e5e5e;
+    pointer-events: none;
+  }
+}

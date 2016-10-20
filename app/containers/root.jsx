@@ -1,11 +1,12 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import Nav from '../components/nav';
 
 class Root extends Component {
    render() {
       return(
          <div className="content-container">
-
+            <Nav />
          </div>
       )
    }

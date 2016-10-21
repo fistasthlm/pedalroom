@@ -7,6 +7,10 @@ class Root extends Component {
       return(
          <div className="content-container">
             <Nav />
+            <div className="divider" />
+            <div className="page-content">
+               {this.props.children}
+            </div>
          </div>
       )
    }

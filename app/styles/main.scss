@@ -25,3 +25,18 @@ body {
   z-index: 2;
   opacity: 0.95;
 }
+
+.divider {
+  border-top: 1px white solid;
+  width: 100%;
+}
+
+.page-content {
+  width: 100%;
+  padding: 20px;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+}

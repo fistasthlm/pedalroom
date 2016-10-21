@@ -28,7 +28,7 @@ export default class BikeGrid extends Component {
 
       return(
         <div>
-           <BikeTile />
+           <BikeTile  />
         </div>
       );
    }

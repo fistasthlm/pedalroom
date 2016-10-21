@@ -1,3 +1,4 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 body {
   margin: 0 0 0 0;
 }
@@ -19,7 +20,7 @@ body {
 .content-container {
   margin: 0 auto;
   background: black;
-  width: 50%;
+  width: 75%;
   height: 2000px;
   z-index: 2;
   opacity: 0.95;

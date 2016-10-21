@@ -12,6 +12,4 @@ export default class Bikes extends Component {
    }
 }
 
-Bikes.propTypes = {
-
-};
+Bikes.propTypes = {};

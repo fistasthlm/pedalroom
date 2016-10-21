@@ -4,9 +4,11 @@ export default class InstragramLink extends Component {
    render() {
       let { handle } = this.props;
       const url = 'https://www.instragram.com/' + handle;
-
+      handle = '@'+handle;
       return(
-         <a href={url} className="instagram-link" />
+         <a href={url} className="instagram-link">
+            {handle}
+         </a>
       );
    }
 }

@@ -1,0 +1,28 @@
+.bike-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bike-tile {
+  max-width: 150px;
+  padding: 5px;
+  border: 1px solid white;
+  text-align: center;
+
+  img {
+    margin-top: 5px;
+    width: 130px;
+    height: auto;
+  }
+
+  span {
+    font-size: 12px;
+    color: white;
+    max-width: 140px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+}

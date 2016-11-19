@@ -1,18 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class InstragramLink extends Component {
+export default class InstagramLink extends Component {
    render() {
       let { handle } = this.props;
-      const url = 'https://www.instragram.com/' + handle;
+      const url = 'https://www.instragram.com/' + handle + '/';
       handle = '@'+handle;
+
       return(
-         <a href={url} className="instagram-link">
+         <a href={url} target="_blank" className="instagram-link">
             {handle}
          </a>
       );
    }
 }
 
-InstragramLink.propTypes = {
+InstagramLink.propTypes = {
    handle: PropTypes.string.isRequired
 };

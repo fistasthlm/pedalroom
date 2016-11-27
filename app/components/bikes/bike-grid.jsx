@@ -32,13 +32,12 @@ export default class BikeGrid extends Component {
       ];
 
       return(
-        <div className="bike-grid">
+        <div className="bike-grid row gutter-0">
            {
               bieks.map(bike => {
                  return <BikeTile key={bike.id} bike={bike} />
               })
            }
-
         </div>
       );
    }

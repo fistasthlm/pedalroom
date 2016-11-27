@@ -13,7 +13,7 @@ export default class Nav extends Component {
                <img className="logo" src="../fistasthlm-logotype.png" />
             </div>
             <div className="right-div">
-               <img className="logo" src="../fistasthlm-logotype.png" />
+               
             </div>
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">
@@ -24,8 +24,8 @@ export default class Nav extends Component {
                      <li className={this.activeClass('bikes')}>
                         <IndexLink className="main-nav-item" to="/bikes">Bikes</IndexLink>
                      </li>
-                     <li className={this.activeClass('merc')}>
-                        <IndexLink className="main-nav-item" to="/merc">For sale</IndexLink>
+                     <li className={this.activeClass('merch')}>
+                        <IndexLink className="main-nav-item" to="/merch">For sale</IndexLink>
                      </li>
                   </ul>
                </nav>

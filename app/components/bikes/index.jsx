@@ -5,7 +5,7 @@ export default class Bikes extends Component {
    render() {
       return(
          <div>
-            <h1>Bieks</h1>
+            <h3>Bieks</h3>
             <BikeGrid />
          </div>
       );

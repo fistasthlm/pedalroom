@@ -4,14 +4,15 @@ import InstagramLink from '../../viewHelper/instagram-link';
 export default class BikeTile extends Component {
    render() {
       const { bike } = this.props;
-      return(
-         <a href="#">
-            <div className="bike-tile">
+
+      return (
+         <div className="bike-tile col-xs-6">
+            <a href={'/bikes/' + bike.id}>
                <img src="../paralaxi.jpg" className="tile-picture" />
                <span>{bike.title}</span>
-               <InstagramLink handle={bike.member} />
-            </div>
-         </a>
+            </a>
+            <InstagramLink handle={bike.member} />
+         </div>
       );
    }
 }

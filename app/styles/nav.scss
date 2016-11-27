@@ -1,15 +1,14 @@
 .nav-content {
-  padding: 20px;
+  padding: 10px;
+  height: 3%;
 
   .left-div {
     float: left !important;
-    width: 35%;
-    max-width: 35%;
     display: inline-block;
     height: 20px;
 
     .logo {
-      width: 200px;
+      width: 100px;
       height: auto;
       float: left;
     }
@@ -17,8 +16,6 @@
 
   .right-div {
     float: right !important;
-    width: 35%;
-    display: inline-block;
     height: 20px;
 
     .logo {
@@ -30,8 +27,11 @@
 
   .navbar-center {
     float: none;
-    display: inline-block;
-    max-width: 30%;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
   }
 
   .navbar {

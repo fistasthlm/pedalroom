@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class InstagramLink extends Component {
    render() {
       let { handle } = this.props;
-      const url = 'https://www.instragram.com/' + handle + '/';
+      const url = 'https://www.instagram.com/' + handle + '/';
       handle = '@'+handle;
 
       return(

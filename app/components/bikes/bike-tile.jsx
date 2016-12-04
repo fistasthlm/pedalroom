@@ -6,12 +6,18 @@ export default class BikeTile extends Component {
       const { bike } = this.props;
 
       return (
-         <div className="bike-tile col-xs-6 col-sm-4">
+         <div className="bike-tile col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <a href={'/bikes/' + bike.id}>
-               <img src="../paralaxi.jpg" className="tile-picture" />
-               <span>{bike.title}</span>
+               <div className="bike-image">
+                  <img src="../paralaxi.jpg" className="tile-picture" />
+               </div>
+               <div className="bike-title ellipsis">
+                  {bike.title}
+               </div>
             </a>
-            <InstagramLink className="insta-link" handle={bike.member} />
+            <div>
+               <InstagramLink className="insta-link" handle={bike.member} />
+            </div>
          </div>
       );
    }

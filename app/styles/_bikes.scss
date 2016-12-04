@@ -1,0 +1,32 @@
+.bike-grid {
+  .bike-tile {
+    height: 210px;
+    padding: 15px 10px 5px 10px;
+    border: 0.5px solid rgba(255, 255, 255, .7);
+    border-radius: 3px;
+
+    .bike-image {
+      margin-bottom: 5px;
+      text-align: center;
+
+      img {
+        width: 130px;
+        height: auto;
+      }
+    }
+
+    .bike-title {
+      font-size: 14px;
+      color: white;
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .instagram-link {
+      font-size: 12px;
+      display: block;
+      color: white;
+      float: right;
+    }
+  }
+}

@@ -11,7 +11,8 @@
     "start": "brunch watch --server"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^4.0.0-alpha.5",
+    "immutable": "^3.8.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",

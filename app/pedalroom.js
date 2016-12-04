@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                <IndexRedirect to="/home"/>
                <Route path="home" component={Home} />
                <Route path="bikes" component={Bikes} />
-               <Route path="bikes/:bikeId" component={Bike} />
+               <Route path="bike/:bikeId" component={Bike} />
                <Route path="merch" component={Merch} />
             </Route>
          </Router>

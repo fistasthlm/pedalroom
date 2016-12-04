@@ -1,42 +1,6 @@
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-body {
-  margin: 0 0 0 0;
-}
-
-.bg-overlay {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: block;
-  background: url(../fistasthlm-bg1.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-}
-
-.content-container {
-  margin: 0 auto;
-  background: black;
-  width: 75%;
-  height: 2000px;
-  z-index: 2;
-  opacity: 0.95;
-}
-
-.divider {
-  border-top: 1px white solid;
-  width: 100%;
-}
-
-.page-content {
-  width: 100%;
-  padding: 20px;
-
-  h1 {
-    color: white;
-    text-align: center;
-  }
-}
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "mixins";
+@import "site-settings";
+@import "base";
+@import "nav";
+@import "bikes";

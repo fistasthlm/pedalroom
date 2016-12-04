@@ -15,6 +15,10 @@ exports.config = {
          presets: ['es2015', 'react'],
          pattern: /\.(es6|jsx|js)$/
       },
+      sass: {
+         precision: 8,
+         mode: 'native',
+      },
    },
 
    files: {
@@ -22,7 +26,7 @@ exports.config = {
          joinTo: 'javascripts/pedalroom.js'
       },
       stylesheets: {
-         joinTo: 'stylesheets/pedalroom.css'
+         joinTo: 'stylesheets/pedalroom.css',
       }
    },
 

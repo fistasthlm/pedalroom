@@ -1,5 +1,6 @@
 import React, { Component, PropType } from 'react';
 import { IndexLink } from 'react-router';
+import InstagramLink from '../../viewHelper/instagram-link';
 
 export default class Bike extends Component {
    render() {
@@ -11,7 +12,7 @@ export default class Bike extends Component {
 
       return (
          <div className="bike">
-            <IndexLink to="/bikes/">
+            <IndexLink to="/bikes">
                Back to bieks
             </IndexLink>
             <br/>
@@ -22,6 +23,8 @@ export default class Bike extends Component {
             <div>
                About biek, balablalflalbalb
             </div>
+
+            <InstagramLink handle={biek.member} />
          </div>
       );
    }

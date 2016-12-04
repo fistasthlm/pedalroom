@@ -10,7 +10,9 @@ export default class Nav extends Component {
       return (
          <div className="nav-content">
             <div className="left-div">
-               <img className="logo" src="../fistasthlm-logotype.png" />
+               <IndexLink to="/home">
+                  <img className="logo" src="../fistasthlm-logotype.png" />
+               </IndexLink>
             </div>
             <div className="right-div">
                

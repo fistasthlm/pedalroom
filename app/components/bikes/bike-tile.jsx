@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { IndexLink } from 'react-router';
-import InstagramLink from '../../viewHelper/instagram-link';
+import InstagramLink from '../viewHelper/instagram-link';
 
 export default class BikeTile extends Component {
    render() {

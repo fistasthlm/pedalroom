@@ -1,6 +1,6 @@
 import React, { Component, PropType } from 'react';
 import { IndexLink } from 'react-router';
-import InstagramLink from '../../viewHelper/instagram-link';
+import InstagramLink from '../viewHelper/instagram-link';
 
 export default class Bike extends Component {
    render() {

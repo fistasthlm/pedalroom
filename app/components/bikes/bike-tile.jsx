@@ -8,7 +8,7 @@ export default class BikeTile extends Component {
 
       const bikeMeta = bike.sys;
       const bikeInfo = bike.fields;
-      const bikeImage = bike.fields.photos[0].fields.file.url;
+      const bikeImage = bikeInfo.photos[0].fields.file.url;
       return (
          <div className="bike-tile col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <IndexLink to={'/bike/' + bikeMeta.id}>
@@ -28,5 +28,5 @@ export default class BikeTile extends Component {
 }
 
 BikeTile.propTypes = {
-   bike: PropTypes.object.isRequired,
+   bike: PropTypes.object.isRequired
 };

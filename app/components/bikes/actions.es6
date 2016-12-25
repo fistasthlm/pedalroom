@@ -20,7 +20,6 @@ function getBikeSuccess(data) {
 
 export function getBike(id) {
    const client = initClient();
-
    return dispatch => {
       client.getEntry(id)
          .then(entry => {
@@ -33,7 +32,7 @@ export function getBike(id) {
 }
 
 export function getBikes() {
-   let client = initClient();
+   const client = initClient();
    return dispatch => {
       client.getEntries({content_type: 'bike'})
          .then(entries => {

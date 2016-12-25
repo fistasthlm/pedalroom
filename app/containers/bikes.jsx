@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import BikeGrid from './bike-grid';
-import { getBikes } from './actions';
+import BikeGrid from '../components/bikes/bike-grid';
+import { getBikes } from '../components/bikes/actions';
 
 class Bikes extends Component {
    componentWillMount() {

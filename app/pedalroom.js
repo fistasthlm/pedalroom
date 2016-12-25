@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import configureStore from './configure-store';
 import Root from 'containers/root';
-import Home from 'components/index';
-import Bikes from 'components/bikes';
-import Bike from 'components/bikes/bike';
-import Merch from 'components/merch';
+import Home from 'containers/home';
+import Bikes from 'containers/bikes';
+import Bike from 'containers/bike';
+import Merch from 'containers/merch';
 
 document.addEventListener('DOMContentLoaded', () => {
    ReactDOM.render(

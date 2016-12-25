@@ -3,42 +3,22 @@ import BikeTile from './bike-tile';
 
 export default class BikeGrid extends Component {
    render() {
-      const bieks = [
-         {
-            id: 1,
-            title: 'Cinelli Laser Corsa',
-            member: 'discobiker'
-         },
-         {
-            id: 2,
-            title: 'Cannondale Track `92',
-            member: 'discobiker'
-         },
-         {
-            id: 3,
-            title: 'Cannondale Track `95',
-            member: 'peteholmberg'
-         },
-         {
-            id: 4,
-            title: 'Cannondale Track `94',
-            member: 'nkdms'
-         },
-         {
-            id: 5,
-            title: 'Cannondale Track `92',
-            member: 'god_galland'
-         }
-      ];
+      const { bikes } = this.props;
 
       return(
         <div className="bike-grid row gutter-0">
            {
-              bieks.map(bike => {
-                 return <BikeTile key={bike.id} bike={bike} />
-              })
+              bikes.length > 0 &&
+                 bikes.map(bike => {
+                    return <BikeTile key={bike.sys.id}
+                                     bike={bike} />
+                 })
            }
         </div>
       );
    }
 }
+
+BikeGrid.propTypes = {
+   bikes: PropTypes.array.isRequired,
+};

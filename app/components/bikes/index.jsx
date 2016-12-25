@@ -1,19 +1,22 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import BikeGrid from './bike-grid';
-import { getBikesFromCms } from './actions';
+import { getBikes } from './actions';
 
 class Bikes extends Component {
    componentWillMount() {
-      let { dispatch, bikeState } = this.props;
-      dispatch(getBikesFromCms());
+      const { dispatch, bikes } = this.props;
+      dispatch(getBikes());
    }
 
    render() {
+      const { bikeState } = this.props;
+      const { bikes } = bikeState.toJS();
+
       return(
          <div>
             <h3>Bieks</h3>
-            <BikeGrid />
+            <BikeGrid bikes={bikes} />
          </div>
       );
    }

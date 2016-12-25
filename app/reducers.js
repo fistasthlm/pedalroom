@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import Immutable from 'immutable';
 
-import { GET_BIKES } from './components/bikes/actions';
+import { GET_BIKES, GET_BIKE } from './components/bikes/actions';
 
-function appState(state = Immutable.Map({}), action = null) {
+function appState(state = Immutable.Map(), action = null) {
    switch (action.type) {
       default:
          return state;
@@ -11,11 +11,15 @@ function appState(state = Immutable.Map({}), action = null) {
 }
 
 function bikeState(state = Immutable.Map({
-   bikes: []
+   bikes: [],
+   bike: {}
 }), action = null) {
+
    switch (action.type) {
       case GET_BIKES:
-         return state.merge(action.bikes);
+         return state.merge({bikes: action.bikes});
+      case GET_BIKE:
+         return state.merge({bike: action.bike});
       default:
          return state;
    }

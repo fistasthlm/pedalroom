@@ -1,15 +1,33 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import BikeGrid from './bike-grid';
+import { getBikes } from './actions';
 
-export default class Bikes extends Component {
+class Bikes extends Component {
+   componentWillMount() {
+      const { dispatch, bikes } = this.props;
+      dispatch(getBikes());
+   }
+
    render() {
+      const { bikeState } = this.props;
+      const { bikes } = bikeState.toJS();
+
       return(
          <div>
             <h3>Bieks</h3>
-            <BikeGrid />
+            <BikeGrid bikes={bikes} />
          </div>
       );
    }
 }
 
-Bikes.propTypes = {};
+function propProvider(reduxState, props) {
+   const { appState, bikeState } = reduxState;
+
+   return {
+      appState,
+      bikeState
+   };
+}
+export default connect(propProvider)(Bikes);

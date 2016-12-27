@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import { IndexLink } from 'react-router';
+import Image from '../components/viewHelper/image';
+
 
 export default class Nav extends Component {
    activeClass(routeName) {
@@ -11,11 +13,10 @@ export default class Nav extends Component {
          <div className="nav-content">
             <div className="left-div">
                <IndexLink to="/home">
-                  <img className="logo" src="../fistasthlm-logotype.png" />
+                  <Image imgId="4wgAQ4qPFKIyyeoUImGYko" imgName="fistasthlm-logotype" className="logo" />
                </IndexLink>
             </div>
             <div className="right-div">
-               
             </div>
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">
@@ -39,4 +40,8 @@ export default class Nav extends Component {
 
 Nav.contextTypes = {
    router: PropTypes.object.isRequired
+};
+
+Nav.propTypes = {
+   getImageFromCms: PropTypes.func.isRequired
 };

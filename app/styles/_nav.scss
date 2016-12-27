@@ -7,6 +7,11 @@
     display: inline-block;
     height: 20px;
 
+
+    @include breakpoint(sm) {
+      width: 20%;
+    }
+
     .logo {
       width: 100px;
       height: auto;
@@ -18,19 +23,22 @@
     float: right !important;
     height: 20px;
 
-    .logo {
-      width: 200px;
-      height: auto;
-      float: right;
+    @include breakpoint(sm) {
+      width: 20%;
     }
   }
 
   .navbar-center {
-    float: none;
     display: none;
+    overflow: auto;
 
     @media (min-width: 768px) {
       display: inline-block;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
     }
   }
 

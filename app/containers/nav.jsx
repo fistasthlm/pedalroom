@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import { IndexLink } from 'react-router';
+import Image from '../components/viewHelper/image';
 
 export default class Nav extends Component {
    activeClass(routeName) {
@@ -11,11 +12,14 @@ export default class Nav extends Component {
          <div className="nav-content">
             <div className="left-div">
                <IndexLink to="/home">
-                  <img className="logo" src="../fistasthlm-logotype.png" />
+                  <Image url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
+                         className="logo"
+                         resize={true}
+                         width="200"
+                         height="80" />
                </IndexLink>
             </div>
             <div className="right-div">
-               
             </div>
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">

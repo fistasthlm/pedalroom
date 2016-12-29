@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import Nav from '../components/nav';
 import { connect } from 'react-redux';
+import Nav from './nav';
 
 class Root extends Component {
    render() {

@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { IndexLink } from 'react-router';
 import Image from '../components/viewHelper/image';
 
-
 export default class Nav extends Component {
    activeClass(routeName) {
       return this.context.router.isActive(routeName, false) ? 'current-page-item' : null;
@@ -44,8 +43,4 @@ export default class Nav extends Component {
 
 Nav.contextTypes = {
    router: PropTypes.object.isRequired
-};
-
-Nav.propTypes = {
-   getImageFromCms: PropTypes.func.isRequired
 };

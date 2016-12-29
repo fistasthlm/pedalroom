@@ -1,17 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Nav from './nav';
-import { getImage } from '../actions';
 
 class Root extends Component {
-   getImageFromCms(id, name) {
-      return getImage(id, name);
-   }
-
    render() {
       return(
          <div className="content-container">
-            <Nav getImageFromCms={this.getImageFromCms} />
+            <Nav />
             <div className="divider" />
             <div className="page-content">
                {this.props.children}

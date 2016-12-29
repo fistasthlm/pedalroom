@@ -13,7 +13,11 @@ export default class Nav extends Component {
          <div className="nav-content">
             <div className="left-div">
                <IndexLink to="/home">
-                  <Image imgId="4wgAQ4qPFKIyyeoUImGYko" imgName="fistasthlm-logotype" className="logo" />
+                  <Image url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
+                         className="logo"
+                         resize={true}
+                         width="200"
+                         height="80" />
                </IndexLink>
             </div>
             <div className="right-div">

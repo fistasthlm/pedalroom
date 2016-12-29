@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { IndexLink } from 'react-router';
 import InstagramLink from '../viewHelper/instagram-link';
+import Image from '../viewHelper/image';
 
 export default class BikeTile extends Component {
    render() {
@@ -13,7 +14,11 @@ export default class BikeTile extends Component {
          <div className="bike-tile col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <IndexLink to={'/bike/' + bikeMeta.id}>
                <div className="bike-image">
-                  <img src={bikeImage} className="tile-picture" />
+                  <Image url={bikeImage}
+                         className="tile-picture"
+                         resize={true}
+                         width="260"
+                         height="260" />
                </div>
                <div className="bike-title ellipsis">
                   {bikeInfo.title}

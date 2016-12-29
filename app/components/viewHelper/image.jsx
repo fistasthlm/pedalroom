@@ -2,17 +2,21 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Image extends Component {
    render() {
-      const { imgId, imgName, className } = this.props;
-      const src = 'https://images.contentful.com/x1j0zkbk3421/' +
-                  imgId + '/66256a7ec6c12ea8f8d1d88bbcafe6ea/' + imgName + '.png';
+      const { url, className, width, height, resize, caption } = this.props;
+
+      const src = resize ? url + '?w=' + width + '&h=' + height :  url;
+
       return(
-         <img className={className} src={src} alt={this.props.caption || ''}/>
+         <img className={className} src={src} alt={caption || ''} />
       )
    }
 }
 
 Image.propTypes = {
-   imgId: PropTypes.string.isRequired,
-   imgName: PropTypes.string.isRequired,
-   className: PropTypes.string
+   url: PropTypes.string.isRequired,
+   caption: PropTypes.string,
+   className: PropTypes.string,
+   width: PropTypes.string,
+   height: PropTypes.string,
+   resize: PropTypes.bool
 };

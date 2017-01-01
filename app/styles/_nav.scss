@@ -26,6 +26,42 @@
     @include breakpoint(sm) {
       width: 20%;
     }
+
+    .hamburger-button {
+      float: right;
+
+      .toggle-button {
+        font-size: 18px;
+        line-height: 20px;
+        border: none;
+        background-color: black;
+
+        .icon-bar {
+          display: block;
+          width: 16px;
+          height: 2px;
+          margin: 4px auto;
+          background-color: white !important;
+          border-radius: 1px;
+          padding: 1px;
+        }
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+    height: 100px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    float: right;
+
+    &.open {
+      display: block;
+    }
   }
 
   .navbar-center {

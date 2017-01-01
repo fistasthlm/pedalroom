@@ -1,10 +1,29 @@
 import React, { Component, PropTypes } from 'react';
 import { IndexLink } from 'react-router';
+import Hamburger from '../components/nav/hamburger';
 import Image from '../components/viewHelper/image';
 
 export default class Nav extends Component {
+   constructor(props) {
+      super(props);
+
+      this.state = {
+         menuToggled: false,
+      }
+   }
+
    activeClass(routeName) {
       return this.context.router.isActive(routeName, false) ? 'current-page-item' : null;
+   }
+
+   toggleMenu() {
+      this.setState({
+         menuToggled: !this.state.menuToggled
+      });
+   }
+
+   hamburgerMenuStyle() {
+      return this.state.menuToggled ? 'hamburger-menu open' : 'hamburger-menu';
    }
 
    render() {
@@ -20,6 +39,7 @@ export default class Nav extends Component {
                </IndexLink>
             </div>
             <div className="right-div">
+               <Hamburger toggleMenu={this.toggleMenu.bind(this)} />
             </div>
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">
@@ -35,6 +55,9 @@ export default class Nav extends Component {
                      </li>
                   </ul>
                </nav>
+            </div>
+            <div className={this.hamburgerMenuStyle()}>
+               coin coin
             </div>
          </div>
       );

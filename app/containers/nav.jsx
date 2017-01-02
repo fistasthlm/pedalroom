@@ -13,7 +13,7 @@ export default class Nav extends Component {
    }
 
    activeClass(routeName) {
-      return this.context.router.isActive(routeName, false) ? 'current-page-item' : null;
+      return this.context.router.isActive(routeName, false) ? 'nav-item active' : 'nav-item';
    }
 
    toggleMenu() {
@@ -44,20 +44,30 @@ export default class Nav extends Component {
             <div className="navbar-center">
                <nav id="navbar" className="navbar navbar-static-top">
                   <ul className="nav navbar-nav">
-                     <li className={this.activeClass('home')}>
-                        <IndexLink className="main-nav-item" to="/">Home</IndexLink>
+                     <li>
+                        <IndexLink className={this.activeClass('home')} to="/">Home</IndexLink>
                      </li>
-                     <li className={this.activeClass('bikes')}>
-                        <IndexLink className="main-nav-item" to="/bikes">Bikes</IndexLink>
+                     <li>
+                        <IndexLink className={this.activeClass('bikes')} to="/bikes">Bikes</IndexLink>
                      </li>
-                     <li className={this.activeClass('merch')}>
-                        <IndexLink className="main-nav-item" to="/merch">For sale</IndexLink>
+                     <li>
+                        <IndexLink className={this.activeClass('merch')} to="/merch">For sale</IndexLink>
                      </li>
                   </ul>
                </nav>
             </div>
             <div className={this.hamburgerMenuStyle()}>
-               coin coin
+               <div>
+                  <div className="menu-item">
+                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('home')} to="/">Home</IndexLink>
+                  </div>
+                  <div className="menu-item">
+                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('bikes')} to="/bikes">Bikes</IndexLink>
+                  </div>
+                  <div className="menu-item">
+                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('merch')} to="/merch">For sale</IndexLink>
+                  </div>
+               </div>
             </div>
          </div>
       );

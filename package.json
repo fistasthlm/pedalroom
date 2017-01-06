@@ -27,7 +27,8 @@
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "require.js": "^1.0.0"
+    "require.js": "^1.0.0",
+    "requirejs": "^2.3.2"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",

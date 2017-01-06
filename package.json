@@ -11,6 +11,10 @@
     "start": "brunch watch --server",
     "postinstall": "brunch build -p"
   },
+  "engines": {
+    "node": "4.x",
+    "npm": "2.x"
+  },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
     "contentful": "^3.8.0",

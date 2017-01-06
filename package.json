@@ -17,7 +17,9 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
+    "brunch": "^2.5.3",
     "contentful": "^3.8.0",
+    "express": "^4.14.0",
     "immutable": "^3.8.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
@@ -25,9 +27,7 @@
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "express": "^4.14.0",
-    "brunch": "^2.5.3"
-
+    "require.js": "^1.0.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",

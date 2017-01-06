@@ -1,7 +1,6 @@
-
 const express = require('express');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4444;
 const basedir = __dirname + '/public';
 
 const app = express();
@@ -12,4 +11,3 @@ app.get('*', (req, res) => res.sendFile('index.html', { root: basedir }));
 
 // Start listening
 app.listen(port);
-console.log(`Server started at port ${port}`);

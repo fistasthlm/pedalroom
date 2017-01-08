@@ -1,5 +1,11 @@
 const express = require('express');
 const requirejs = require('requirejs');
+const path = require('path');
+
+const port = process.env.PORT || 4444;
+const basedir = __dirname + '/public';
+
+
 
 requirejs.config({
    //Pass the top-level main.js/index.js require
@@ -8,14 +14,10 @@ requirejs.config({
    nodeRequire: require
 });
 
-const port = process.env.PORT || 4444;
-const basedir = __dirname + '/public';
 
 const app = express();
 
-// HTML5 pushState: serve static files or index.html for everything else
 app.use(express.static(basedir));
-app.get('*', (req, res) => res.sendFile('index.html', { root: basedir }));
+app.get('*', (req, res) => res.sendFile(path.join(basedir, 'index.html')));
 
-// Start listening
 app.listen(port);

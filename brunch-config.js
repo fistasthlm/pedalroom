@@ -23,7 +23,10 @@ exports.config = {
 
    files: {
       javascripts: {
-         joinTo: 'javascripts/pedalroom.js'
+         joinTo: {
+            'javascripts/app.js': /^app/,
+            'javascripts/vendor.js': /^(?!app)/
+         }
       },
       stylesheets: {
          joinTo: 'stylesheets/pedalroom.css',

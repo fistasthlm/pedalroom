@@ -12,8 +12,8 @@
     "postinstall": "brunch build -p"
   },
   "engines": {
-    "node": "4.x",
-    "npm": "2.x"
+    "node": "6.x",
+    "npm": "3.x"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
@@ -26,8 +26,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0",
-    "requirejs": "^2.3.2"
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",

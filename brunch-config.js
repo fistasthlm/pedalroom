@@ -24,7 +24,7 @@ exports.config = {
    files: {
       javascripts: {
          joinTo: {
-            'javascripts/app.js': /^app/,
+            'javascripts/pedalroom.js': /^app/,
             'javascripts/vendor.js': /^(?!app)/
          }
       },

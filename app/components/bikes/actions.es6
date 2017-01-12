@@ -11,7 +11,6 @@ function getBikesSuccess(data) {
 }
 
 function getBikeSuccess(data) {
-   console.log('action', data);
    return {
       type: GET_BIKE,
       bike: data

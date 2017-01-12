@@ -12,7 +12,7 @@ export default class BikeTile extends Component {
       const bikeImage = bikeInfo.photos[0].fields.file.url;
       return (
          <div className="bike-tile col-6 col-sm-4 col-md-3 col-lg-2">
-            <IndexLink to={'/bike/' + bikeMeta.id}>
+            <IndexLink to={'/bikes/' + bikeMeta.id}>
                <div className="bike-image">
                   <Image url={bikeImage}
                          className="tile-picture"

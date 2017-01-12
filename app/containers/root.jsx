@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import Nav from './nav';
 
 class Root extends Component {
+   constructor(props) {
+      super(props);
+   }
+
    render() {
       return(
          <div className="content-container">

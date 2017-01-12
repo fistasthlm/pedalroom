@@ -8,6 +8,7 @@ import Home from 'containers/home';
 import Bikes from 'containers/bikes';
 import Bike from 'containers/bike';
 import Merch from 'containers/merch';
+import Error from 'containers/error';
 
 document.addEventListener('DOMContentLoaded', () => {
    ReactDOM.render(
@@ -17,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
                <IndexRedirect to="/home"/>
                <Route path="home" component={Home} />
                <Route path="bikes" component={Bikes} />
-               <Route path="bike/:bikeId" component={Bike} />
+               <Route path="bike" component={Bike} />
                <Route path="merch" component={Merch} />
+               <Route path="*" component={Error} status={404} />
             </Route>
          </Router>
       </Provider>,

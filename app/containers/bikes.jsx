@@ -5,7 +5,7 @@ import { getBikes } from '../components/bikes/actions';
 
 class Bikes extends Component {
    componentWillMount() {
-      const { dispatch, bikes } = this.props;
+      const { dispatch } = this.props;
       dispatch(getBikes());
    }
 

@@ -4,22 +4,31 @@ import BikeInfo from '../components/bikes/bike-info';
 import { getBike } from '../components/bikes/actions';
 
 class Bike extends Component {
+   constructor(props) {
+      super(props);
+   }
+
    componentWillMount() {
       const { dispatch } = this.props;
-      const id = window.location.pathname.split('/')[2];
-      dispatch(getBike(id));
+      // const id = window.location.pathname.split('/')[2];
+      // dispatch(getBike(id));
    }
 
    render() {
       const { bikeState } = this.props;
-      const state = bikeState.toJS();
-      const bike = state.bike.fields;
+      // const state = bikeState.toJS();
+      // const bike = state.bike.fields;
+
+      const bike = {
+         title: 'Dolan',
+         instagramHandle: 'peteholmberg'
+      };
 
       return (
          bike ?
             <BikeInfo bike={bike} />
          :
-            <div></div>
+            <div>Soon be bieks</div>
       );
    }
 }

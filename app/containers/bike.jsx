@@ -10,19 +10,14 @@ class Bike extends Component {
 
    componentWillMount() {
       const { dispatch } = this.props;
-      // const id = window.location.pathname.split('/')[2];
-      // dispatch(getBike(id));
+      const id = window.location.hash.split('/')[2];
+      dispatch(getBike(id));
    }
 
    render() {
       const { bikeState } = this.props;
-      // const state = bikeState.toJS();
-      // const bike = state.bike.fields;
-
-      const bike = {
-         title: 'Dolan',
-         instagramHandle: 'peteholmberg'
-      };
+      const state = bikeState.toJS();
+      const bike = state.bike.fields;
 
       return (
          bike ?

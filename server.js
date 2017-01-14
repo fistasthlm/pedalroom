@@ -6,6 +6,6 @@ const basedir = __dirname + '/public';
 const app = express();
 
 app.use(express.static(basedir));
-app.get('*', (req, res) => res.sendFile(path.join(basedir, 'index.html')));
+app.get('*', (request, response) => response.sendFile(path.join(basedir, 'index.html')));
 
 app.listen(port);

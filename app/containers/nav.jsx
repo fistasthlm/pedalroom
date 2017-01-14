@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { IndexLink } from 'react-router';
+import { Link } from 'react-router';
 import Hamburger from '../components/nav/hamburger';
 import Image from '../components/viewHelper/image';
 
@@ -10,10 +10,6 @@ export default class Nav extends Component {
       this.state = {
          menuToggled: false,
       }
-   }
-
-   activeClass(routeName) {
-      return this.context.router.isActive(routeName, false) ? 'nav-item active' : 'nav-item';
    }
 
    toggleMenu() {
@@ -30,13 +26,13 @@ export default class Nav extends Component {
       return (
          <div className="nav-content">
             <div className="left-div">
-               <IndexLink to="/home">
+               <Link to="/home">
                   <Image url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
                          className="logo"
                          resize={true}
                          width="200"
                          height="80" />
-               </IndexLink>
+               </Link>
             </div>
             <div className="right-div">
                <Hamburger toggleMenu={this.toggleMenu.bind(this)} />
@@ -45,13 +41,13 @@ export default class Nav extends Component {
                <nav id="navbar" className="navbar navbar-static-top">
                   <ul className="nav navbar-nav">
                      <li>
-                        <IndexLink className={this.activeClass('home')} to="/">Home</IndexLink>
+                        <Link activeClassName="active" className="nav-item" to="/home">Home</Link>
                      </li>
                      <li>
-                        <IndexLink className={this.activeClass('bikes')} to="/bikes">Bikes</IndexLink>
+                        <Link activeClassName="active" className="nav-item" to="/bikes">Bikes</Link>
                      </li>
                      <li>
-                        <IndexLink className={this.activeClass('merch')} to="/merch">For sale</IndexLink>
+                        <Link activeClassName="active" className="nav-item" to="/merch">For sale</Link>
                      </li>
                   </ul>
                </nav>
@@ -59,13 +55,28 @@ export default class Nav extends Component {
             <div className={this.hamburgerMenuStyle()}>
                <div>
                   <div className="menu-item">
-                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('home')} to="/">Home</IndexLink>
+                     <Link activeClassName="active"
+                           className="nav-item"
+                           onClick={this.toggleMenu.bind(this)}
+                           to="/home">
+                        Home
+                     </Link>
                   </div>
                   <div className="menu-item">
-                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('bikes')} to="/bikes">Bikes</IndexLink>
+                     <Link activeClassName="active"
+                           className="nav-item"
+                           onClick={this.toggleMenu.bind(this)}
+                           to="/bikes">
+                        Bikes
+                     </Link>
                   </div>
                   <div className="menu-item">
-                     <IndexLink onClick={this.toggleMenu.bind(this)} className={this.activeClass('merch')} to="/merch">For sale</IndexLink>
+                     <Link activeClassName="active"
+                           className="nav-item"
+                           onClick={this.toggleMenu.bind(this)}
+                           to="/merch">
+                        For sale
+                     </Link>
                   </div>
                </div>
             </div>

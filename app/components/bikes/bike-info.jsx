@@ -4,8 +4,8 @@ import InstagramLink from '../viewHelper/instagram-link';
 export default class BikeInfo extends Component {
    render() {
       const { bike } = this.props;
-      // const bikeImage = bike.fields.photos[0].fields.file.url;
 
+      console.log(bike);
       return (
          <div className="bike">
             <div className="title">

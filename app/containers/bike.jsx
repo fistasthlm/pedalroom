@@ -1,17 +1,21 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import BikeInfo from '../components/bikes/bike-info';
+import Loader from '../components/viewHelper/loader';
 import { getBike } from '../components/bikes/actions';
 
 class Bike extends Component {
-   constructor(props) {
-      super(props);
+   componentWillMount() {
+       this.loadBike();
    }
 
-   componentWillMount() {
-      const { dispatch } = this.props;
-      const id = window.location.hash.split('/')[2];
-      dispatch(getBike(id));
+   componentWillReceiveProps(nextProps) {
+   }
+
+   loadBike() {
+       const {dispatch} = this.props;
+       const id = window.location.hash.split('/')[2];
+       dispatch(getBike(id));
    }
 
    render() {
@@ -23,7 +27,7 @@ class Bike extends Component {
          bike ?
             <BikeInfo bike={bike} />
          :
-            <div>Soon be bieks</div>
+            <Loader />
       );
    }
 }

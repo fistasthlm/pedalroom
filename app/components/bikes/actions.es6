@@ -1,4 +1,5 @@
 import { initClient } from '../../utils/cms';
+import { networkProgress } from '../../actions';
 
 export const GET_BIKES = 'GET_BIKES';
 export const GET_BIKE = 'GET_BIKE';

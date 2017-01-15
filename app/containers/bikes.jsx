@@ -12,7 +12,6 @@ class Bikes extends Component {
    render() {
       const { bikeState } = this.props;
       const { bikes } = bikeState.toJS();
-
       return(
          <div>
             <h3>Bieks</h3>

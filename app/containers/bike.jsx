@@ -14,7 +14,7 @@ class Bike extends Component {
 
    loadBike() {
        const {dispatch} = this.props;
-       const id = window.location.hash.split('/')[2];
+       const id = window.location.hash.split('/')[2].split('?')[0];
        dispatch(getBike(id));
    }
 
@@ -24,10 +24,10 @@ class Bike extends Component {
       const bike = state.bike.fields;
 
       return (
-         bike ?
-            <BikeInfo bike={bike} />
-         :
-            <Loader />
+            bike ?
+               <BikeInfo bike={bike} />
+            :
+               <Loader />
       );
    }
 }

@@ -21,9 +21,9 @@ function getBikeSuccess(data) {
 export function getBike(id) {
    const client = initClient();
    return dispatch => {
-      client.getEntry(id)
-         .then(entry => {
-            dispatch(getBikeSuccess(entry));
+      client.getEntries({'sys.id': id})
+         .then(response => {
+            dispatch(getBikeSuccess(response.items[0]));
          })
          .catch(error => {
             console.log(error);

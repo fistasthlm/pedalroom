@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import BikePhotos from './bike-photos';
+import BikeSpecs from './bike-specs';
 import InstagramLink from '../viewHelper/instagram-link';
 
 export default class BikeInfo extends Component {
    render() {
       const { bike } = this.props;
       const images = bike.photos;
-      console.log(bike);
-      console.log(images);
       return (
          <div className="bike">
                <div className="bike-title">
@@ -15,6 +14,7 @@ export default class BikeInfo extends Component {
                </div>
                <InstagramLink handle={bike.instagramHandle} />
                <BikePhotos images={images} />
+               <BikeSpecs bike={bike} />
          </div>
       );
    }

@@ -3,19 +3,28 @@ import { networkProgress } from '../../actions';
 
 export const GET_BIKES = 'GET_BIKES';
 export const GET_BIKE = 'GET_BIKE';
+export const CLEAR_BIKE = 'CLEAR_BIKE';
 
 function getBikesSuccess(data) {
    return {
       type: GET_BIKES,
       bikes: data
-   }
+   };
 }
 
 function getBikeSuccess(data) {
    return {
       type: GET_BIKE,
       bike: data
-   }
+   };
+}
+
+export function clearBike() {
+   return dispatch => {
+      dispatch({
+         type: CLEAR_BIKE
+      });
+   };
 }
 
 export function getBike(id) {
@@ -27,8 +36,8 @@ export function getBike(id) {
          })
          .catch(error => {
             console.log(error);
-         })
-   }
+         });
+   };
 }
 
 export function getBikes() {
@@ -41,5 +50,5 @@ export function getBikes() {
          .catch(error => {
             console.log(error);
          });
-   }
+   };
 }

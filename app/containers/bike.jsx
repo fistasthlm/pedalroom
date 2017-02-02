@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import BikeInfo from '../components/bikes/bike-info';
 import Loader from '../components/viewHelper/loader';
-import { getBike } from '../components/bikes/actions';
+import { getBike, clearBike } from '../components/bikes/actions';
 
 class Bike extends Component {
    componentWillMount() {
@@ -10,6 +10,10 @@ class Bike extends Component {
    }
 
    componentWillReceiveProps(nextProps) {
+   }
+
+   componentWillUnmount() {
+      this.props.dispatch(clearBike());
    }
 
    loadBike() {

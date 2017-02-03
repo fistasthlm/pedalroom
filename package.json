@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "brunch watch --server",
+    "fix": "eslint --fix app/.; exit 0",
     "postinstall": "brunch build -p"
   },
   "engines": {

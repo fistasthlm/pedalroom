@@ -5,14 +5,13 @@ import { getBikes } from '../components/bikes/actions';
 
 class Bikes extends Component {
    componentWillMount() {
-      const { dispatch, bikes } = this.props;
+      const { dispatch } = this.props;
       dispatch(getBikes());
    }
 
    render() {
       const { bikeState } = this.props;
       const { bikes } = bikeState.toJS();
-
       return(
          <div>
             <h3>Bieks</h3>

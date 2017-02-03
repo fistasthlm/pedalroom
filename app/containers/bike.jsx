@@ -1,13 +1,25 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import BikeInfo from '../components/bikes/bike-info';
-import { getBike } from '../components/bikes/actions';
+import Loader from '../components/viewHelper/loader';
+import { getBike, clearBike } from '../components/bikes/actions';
 
 class Bike extends Component {
    componentWillMount() {
-      const { dispatch } = this.props;
-      const id = window.location.pathname.split('/')[2];
-      dispatch(getBike(id));
+       this.loadBike();
+   }
+
+   componentWillReceiveProps(nextProps) {
+   }
+
+   componentWillUnmount() {
+      this.props.dispatch(clearBike());
+   }
+
+   loadBike() {
+       const {dispatch} = this.props;
+       const id = window.location.hash.split('/')[2].split('?')[0];
+       dispatch(getBike(id));
    }
 
    render() {
@@ -16,10 +28,10 @@ class Bike extends Component {
       const bike = state.bike.fields;
 
       return (
-         bike ?
-            <BikeInfo bike={bike} />
-         :
-            <div></div>
+            bike ?
+               <BikeInfo bike={bike} />
+            :
+               <Loader />
       );
    }
 }

@@ -8,7 +8,7 @@ export default class Image extends Component {
 
       return(
          <img className={className} src={src} alt={caption || ''} />
-      )
+      );
    }
 }
 

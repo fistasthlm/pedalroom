@@ -1,5 +1,4 @@
 import { initClient } from '../../utils/cms';
-import { networkProgress } from '../../actions';
 
 export const GET_BIKES = 'GET_BIKES';
 export const GET_BIKE = 'GET_BIKE';
@@ -35,7 +34,7 @@ export function getBike(id) {
             dispatch(getBikeSuccess(response.items[0]));
          })
          .catch(error => {
-            console.log(error);
+            console.error('Error getting bike', error);
          });
    };
 }
@@ -48,7 +47,7 @@ export function getBikes() {
             dispatch(getBikesSuccess(entries.items));
          })
          .catch(error => {
-            console.log(error);
+            console.error('Error getting bikes', error);
          });
    };
 }

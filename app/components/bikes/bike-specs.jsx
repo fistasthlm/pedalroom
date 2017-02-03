@@ -3,22 +3,37 @@ import React, { PropTypes, Component } from 'react';
 export default class BikeSpecs extends Component {
    render() {
       const { bike } = this.props;
-      const properties = Object.entries(bike);
-
       return (
          <div className="bike-specs">
-            {
-               properties.map((property, index) => {
-                  // ignore photos
-                  if (index !== 0) {
-                     return(
-                        <div key={index}>
-                           <span className="property">{property[0]}: </span><span>{property[1]}</span>
-                        </div>
-                     );
-                  }
-               })
-            }
+            <ul className="property-group">
+               <li className="property-group-item">
+                  Frame - {bike.frame}
+               </li>
+               <li className="property-group-item">
+                  Fork - {bike.fork}
+               </li>
+               <li className="property-group-item">
+                  Cranks - {bike.cranks}
+               </li>
+               <li className="property-group-item">
+                  Drivetrain - {bike.drivetrain}
+               </li>
+               <li className="property-group-item">
+                  Handlebars/Stem: {bike.handlebars}
+               </li>
+               <li className="property-group-item">
+                  Pedals: {bike.pedals}
+               </li>
+               <li className="property-group-item">
+                  Saddle/Seatpost: {bike.saddle}
+               </li>
+               <li className="property-group-item">
+                  Front wheel: {bike.frontWheel}
+               </li>
+               <li className="property-group-item">
+                  Rear wheel: {bike.rearWheel}
+               </li>
+            </ul>
          </div>
       );
    }

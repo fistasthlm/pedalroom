@@ -19,19 +19,19 @@ export default class BikeSpecs extends Component {
                   Drivetrain - {bike.drivetrain}
                </li>
                <li className="property-group-item">
-                  Handlebars/Stem: {bike.handlebars}
+                  Handlebars/Stem - {bike.handlebars}
                </li>
                <li className="property-group-item">
-                  Pedals: {bike.pedals}
+                  Pedals - {bike.pedals}
                </li>
                <li className="property-group-item">
-                  Saddle/Seatpost: {bike.saddle}
+                  Saddle/Seatpost - {bike.saddle}
                </li>
                <li className="property-group-item">
-                  Front wheel: {bike.frontWheel}
+                  Front wheel - {bike.frontWheel}
                </li>
                <li className="property-group-item">
-                  Rear wheel: {bike.rearWheel}
+                  Rear wheel - {bike.rearWheel}
                </li>
             </ul>
          </div>

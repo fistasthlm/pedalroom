@@ -55,13 +55,28 @@
       display: inline-block;
       width: 220px;
       height: auto;
+      vertical-align: top;
+
+      @include breakpoint(xxxs) {
+        width: 280px;
+      }
+
+      @include breakpoint(sm) {
+        width: 520px;
+      }
     }
 
     .image-thumbnails {
       display: inline-block;
+      margin-left: 10px;
 
       .thumbnail {
+        margin: 5px 0;
+        width: 60px;
 
+        @include breakpoint(sm) {
+          width: 120px;
+        }
       }
     }
   }

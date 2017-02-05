@@ -7,7 +7,7 @@ class Error extends Component {
          <div>
             <h3>error :(</h3>
          </div>
-      )
+      );
    }
 }
 

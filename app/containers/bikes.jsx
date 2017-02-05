@@ -4,9 +4,12 @@ import BikeGrid from '../components/bikes/bike-grid';
 import { getBikes } from '../components/bikes/actions';
 
 class Bikes extends Component {
-   componentWillMount() {
-      const { dispatch } = this.props;
-      dispatch(getBikes());
+   componentDidMount() {
+      const { dispatch, bikeState } = this.props;
+      const bikes = bikeState.get('bikes');
+      if(bikes.length === 0) {
+         dispatch(getBikes());
+      }
    }
 
    render() {

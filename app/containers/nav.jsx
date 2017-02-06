@@ -9,7 +9,7 @@ export default class Nav extends Component {
 
       this.state = {
          menuToggled: false,
-      }
+      };
    }
 
    toggleMenu() {

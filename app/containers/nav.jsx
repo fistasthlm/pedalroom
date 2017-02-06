@@ -37,20 +37,10 @@ export default class Nav extends Component {
             <div className="right-div">
                <Hamburger toggleMenu={this.toggleMenu.bind(this)} />
             </div>
-            <div className="navbar-center">
-               <nav id="navbar" className="navbar navbar-static-top">
-                  <ul className="nav navbar-nav">
-                     <li>
-                        <Link activeClassName="active" className="nav-item" to="/home">Home</Link>
-                     </li>
-                     <li>
-                        <Link activeClassName="active" className="nav-item" to="/bikes">Bikes</Link>
-                     </li>
-                     <li>
-                        <Link activeClassName="active" className="nav-item" to="/merch">For sale</Link>
-                     </li>
-                  </ul>
-               </nav>
+            <div className="navbar">
+               <Link activeClassName="active" className="nav-item" to="/home">Home</Link>
+               <Link activeClassName="active" className="nav-item" to="/bikes">Bikes</Link>
+               <Link activeClassName="active" className="nav-item" to="/merch">For sale</Link>
             </div>
             <div className={this.hamburgerMenuStyle()}>
                <div>

@@ -7,7 +7,7 @@ export default class HomePageInfo extends Component {
          <div className="home">
             <div className="quote">
                <span>
-                  "Not a club, nor a gang. Just a group of drunks with a passion for bikes!"
+                  Not a club, nor a gang. Just a group of drunks with a passion for bikes!
                </span>
             </div>
             <div className="instagram">

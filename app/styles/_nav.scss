@@ -1,6 +1,5 @@
 .nav-content {
   padding: 10px;
-  height: 3%;
 
   .left-div {
     float: left !important;
@@ -80,22 +79,14 @@
     }
   }
 
-  .navbar-center {
+  .navbar {
     display: none;
     overflow: auto;
+    padding-top: 5px;
 
     @media (min-width: 768px) {
       display: inline-block;
     }
-
-    li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-  }
-
-  .navbar {
-    text-align: center;
   }
 
   .menu-item {
@@ -111,6 +102,10 @@
 
     @include breakpoint(sm) {
       font-size: 20px;
+    }
+
+    @include breakpoint(md) {
+      padding: 10px;
     }
 
     &.active {

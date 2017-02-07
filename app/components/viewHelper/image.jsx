@@ -7,7 +7,7 @@ export default class Image extends Component {
       const src = resize ? url + '?w=' + width + '&h=' + height :  url;
 
       return(
-         <img className={className} src={src} alt={caption || ''} />
+         <img className={className} src={src} alt={caption || ''} onClick={this.props.onClick} />
       );
    }
 }
@@ -18,5 +18,6 @@ Image.propTypes = {
    className: PropTypes.string,
    width: PropTypes.string,
    height: PropTypes.string,
-   resize: PropTypes.bool
+   resize: PropTypes.bool,
+   onClick: PropTypes.func
 };

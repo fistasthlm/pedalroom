@@ -19,11 +19,18 @@ export default class BikePhotos extends Component {
                images.map((image, index) => {
                   return(
                      <div key={index}>
-                        <Image className="thumbnail"
-                               url={image.fields.file.url}
-                               resize={true}
-                               width="300"
-                               height="300" />
+                        {
+                           index < 3 ?
+                              <Image className="thumbnail"
+                                     url={image.fields.file.url}
+                                     resize={true}
+                                     width="300"
+                                     height="300" />
+                           :
+                              <div className="placeholder-image">
+                                 <span>+ {images.length - 3}</span>
+                              </div>
+                        }
                      </div>
                   );
                })

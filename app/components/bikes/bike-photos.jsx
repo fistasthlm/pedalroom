@@ -17,32 +17,19 @@ export default class BikePhotos extends Component {
          <div className="image-thumbnails">
             {
                images.map((image, index) => {
-                  if (index < 3) {
-                     return (
-                        <div key={index}>
-                           <Image className="thumbnail"
-                                  url={image.fields.file.url}
-                                  resize={true}
-                                  width="300"
-                                  height="300"
-                                  onClick={this.openImage.bind(this, index)}/>
-                        </div>
-                     );
-                  }
+                  return(
+                     <div key={index}>
+                        <Image className="thumbnail"
+                               url={image.fields.file.url}
+                               resize={true}
+                               width="300"
+                               height="300" />
+                     </div>
+                  );
                })
-            }
-            {
-               <div className="placeholder-image" onClick={this.openImage.bind(this, 3)}>
-                  <span>+ {images.length - 3}</span>
-               </div>
             }
          </div>
       );
-   }
-
-   openImage(index) {
-      this.setState({photoIndex: index});
-      this.toggleLightBox();
    }
 
    toggleLightBox() {
@@ -74,13 +61,12 @@ export default class BikePhotos extends Component {
          <div className="photos">
             {
                images &&
-                  <div>
+                  <div onClick={this.toggleLightBox.bind(this)}>
                      <Image className="big-picture"
                             url={images[0].fields.file.url}
                             width="800"
                             height="800"
-                            resize={true}
-                            onClick={this.openImage.bind(this, 0)} />
+                            resize={true} />
                      {
                         images.length > 1 &&
                            this.renderThumbnails(images)

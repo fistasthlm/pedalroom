@@ -15,7 +15,7 @@ export default class HomePageInfo extends Component {
                   <InstagramLogo />
                </a>
             </div>
-            <div>
+            <div className="home">
                <span>Check out our bikes or buy our shit!</span>
             </div>
          </div>

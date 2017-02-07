@@ -18,6 +18,10 @@ export default class Nav extends Component {
       });
    }
 
+   closeHamburgerMenu() {
+      this.setState({ menuToggled: false });
+   }
+
    hamburgerMenuStyle() {
       return this.state.menuToggled ? 'hamburger-menu open' : 'hamburger-menu';
    }
@@ -25,7 +29,7 @@ export default class Nav extends Component {
    render() {
       return (
          <div className="nav-content">
-            <div className="left-div">
+            <div className="left-div" onClick={this.closeHamburgerMenu.bind(this)}>
                <Link to="/home">
                   <Image url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
                          className="logo"

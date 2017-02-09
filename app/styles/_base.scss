@@ -1,5 +1,6 @@
 body {
   margin: 0 0 0 0;
+  background-color: black;
 }
 
 #app {
@@ -63,18 +64,18 @@ a {
 }
 
 .gutter-0.row, .gutter-0.same-height-row {
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"] {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .gutter-0-descendants [class^="col-"], .gutter-0-descendants [class^=" col-"] {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .ellipsis {

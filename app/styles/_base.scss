@@ -1,6 +1,10 @@
 body {
   margin: 0 0 0 0;
   background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Calibri Light", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em;
 }
 
 #app {

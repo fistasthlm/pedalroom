@@ -1,17 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import ErrorPage from 'components/error/error-page';
 
 class Error extends Component {
    render() {
       return(
-         <div>
-            <h3>error :(</h3>
-         </div>
+         <ErrorPage />
       );
    }
 }
 
-function propProvider(reduxState, props) {
+function propProvider(reduxState) {
    const { appState } = reduxState;
 
    return {

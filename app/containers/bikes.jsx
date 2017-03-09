@@ -23,7 +23,7 @@ class Bikes extends Component {
    }
 }
 
-function propProvider(reduxState, props) {
+function propProvider(reduxState) {
    const { appState, bikeState } = reduxState;
 
    return {

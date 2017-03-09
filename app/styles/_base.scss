@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.02em;
+  color: white;
 }
 
 #app {
@@ -53,10 +54,6 @@ body {
 .page-content {
   width: 100%;
   padding: 10px 2px;
-
-  h1, h2, h3 {
-    color: white;
-  }
 }
 
 a {

@@ -12,7 +12,7 @@ export default class Hamburger extends Component {
                <span className="icon-bar"></span>
             </button>
          </div>
-      )
+      );
    }
 }
 

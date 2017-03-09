@@ -17,14 +17,13 @@ class Bikes extends Component {
       const { bikes } = bikeState.toJS();
       return(
          <div>
-            <h3>Bieks</h3>
             <BikeGrid bikes={bikes} />
          </div>
       );
    }
 }
 
-function propProvider(reduxState, props) {
+function propProvider(reduxState) {
    const { appState, bikeState } = reduxState;
 
    return {

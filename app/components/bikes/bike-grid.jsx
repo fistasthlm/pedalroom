@@ -12,7 +12,7 @@ export default class BikeGrid extends Component {
               bikes.length > 0 ?
                  bikes.map(bike => {
                     return <BikeTile key={bike.sys.id}
-                                     bike={bike} />
+                                     bike={bike} />;
                  })
               :
                   <Loader />

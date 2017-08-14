@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 import Hamburger from 'components/nav/hamburger';
 import Image from 'components/viewHelper/image';
 
-export default class Navbar extends Component {
+export default class Navbar extends PureComponent {
    constructor(props) {
       super(props);
 

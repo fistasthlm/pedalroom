@@ -1,8 +1,8 @@
-import React, {PropTypes, Component } from 'react';
+import React, { PureComponent } from 'react';
 import Image from '../../components/viewHelper/image';
 import Lightbox from 'react-image-lightbox';
 
-export default class BikePhotos extends Component {
+export default class BikePhotos extends PureComponent {
    constructor(props) {
       super(props);
 

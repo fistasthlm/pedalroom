@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import Navbar from 'components/nav/navbar';
 
-export default class Nav extends Component {
+export default class Nav extends PureComponent {
    constructor(props) {
       super(props);
 

@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BikeGrid from '../components/bikes/bike-grid';
-import { getBikes } from '../components/bikes/actions';
+import { getBikes } from '../actions/bike-actions';
 
 class Bikes extends Component {
    componentDidMount() {
       const { dispatch, bikeState } = this.props;
       const bikes = bikeState.get('bikes');
-      if(bikes.length === 0) {
+
+      if(!bikes) {
          dispatch(getBikes());
       }
    }
 
    render() {
       const { bikeState } = this.props;
-      const { bikes } = bikeState.toJS();
+      const bikes = bikeState.get('bikes');
       return(
          <div>
-            <BikeGrid bikes={bikes} />
+            {
+               bikes &&
+                  <BikeGrid bikes={bikes} />
+            }
          </div>
       );
    }

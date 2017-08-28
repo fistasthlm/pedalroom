@@ -21,8 +21,7 @@ class Bike extends Component {
 
    render() {
       const { bikeState } = this.props;
-      const state = bikeState.toJS();
-      const bike = state.bike.fields;
+      const bike = bikeState.get('bike');
 
       return (
             bike ?

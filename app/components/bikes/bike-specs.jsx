@@ -1,36 +1,37 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import { Map } from 'immutable';
 
 export default function BikeSpecs({bike}) {
    return (
       <div className="bike-specs">
          <ul className="property-group">
             <li className="property-group-item">
-               Frame - {bike.frame}
+               Frame - {bike.get('frame')}
             </li>
             <li className="property-group-item">
-               Fork - {bike.fork}
+               Fork - {bike.get('fork')}
             </li>
             <li className="property-group-item">
-               Cranks - {bike.cranks}
+               Cranks - {bike.get('cranks')}
             </li>
             <li className="property-group-item">
-               Drivetrain - {bike.drivetrain}
+               Drivetrain - {bike.get('drivetrain')}
             </li>
             <li className="property-group-item">
-               Handlebars/Stem - {bike.handlebars}
+               Handlebars/Stem - {bike.get('handlebars')}
             </li>
             <li className="property-group-item">
-               Pedals - {bike.pedals}
+               Pedals - {bike.get('pedals')}
             </li>
             <li className="property-group-item">
-               Saddle/Seatpost - {bike.saddle}
+               Saddle/Seatpost - {bike.get('saddle')}
             </li>
             <li className="property-group-item">
-               Front wheel - {bike.frontWheel}
+               Front wheel - {bike.get('frontWheel')}
             </li>
             <li className="property-group-item">
-               Rear wheel - {bike.rearWheel}
+               Rear wheel - {bike.get('rearWheel')}
             </li>
          </ul>
       </div>
@@ -38,5 +39,5 @@ export default function BikeSpecs({bike}) {
 }
 
 BikeSpecs.propTypes = {
-   bike: PropTypes.object.isRequired
+   bike: PropTypes.instanceOf(Map).isRequired
 };

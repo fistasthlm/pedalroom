@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BikeInfo from '../components/bikes/bike-info';
 import Loader from '../components/viewHelper/loader';
-import { getBike, clearBike } from '../components/bikes/actions';
+import { getBike, clearBike } from '../actions/bike-actions';
 
 class Bike extends Component {
    componentWillMount() {
@@ -21,8 +21,7 @@ class Bike extends Component {
 
    render() {
       const { bikeState } = this.props;
-      const state = bikeState.toJS();
-      const bike = state.bike.fields;
+      const bike = bikeState.get('bike');
 
       return (
             bike ?

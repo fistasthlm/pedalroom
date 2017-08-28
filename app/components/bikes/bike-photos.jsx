@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { List } from 'immutable';
 import Image from '../../components/viewHelper/image';
 import Lightbox from 'react-image-lightbox';
 
@@ -20,7 +22,7 @@ export default class BikePhotos extends PureComponent {
                   return(
                      <div key={index}>
                         <Image className="thumbnail"
-                               url={image.fields.file.url}
+                               url={image.get('url')}
                                resize={true}
                                width="300"
                                height="300" />
@@ -63,7 +65,7 @@ export default class BikePhotos extends PureComponent {
                images &&
                   <div onClick={this.toggleLightBox.bind(this)}>
                      <Image className="big-picture"
-                            url={images[0].fields.file.url}
+                            url={images.first().get('url')}
                             width="800"
                             height="800"
                             resize={true} />
@@ -89,3 +91,7 @@ export default class BikePhotos extends PureComponent {
       );
    }
 }
+
+BikePhotos.propTypes = {
+   images: PropTypes.instanceOf(List).isRequired
+};

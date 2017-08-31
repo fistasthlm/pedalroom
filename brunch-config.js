@@ -2,14 +2,12 @@ exports.config = {
    npm: {
       enabled: true
    },
-
    sourceMaps: true,
    overrides: {
       production: {
          sourceMaps: false
       }
    },
-
    plugins: {
       babel: {
          presets: ['es2015', 'react'],
@@ -20,7 +18,6 @@ exports.config = {
          mode: 'native',
       },
    },
-
    files: {
       javascripts: {
          joinTo: 'javascripts/pedalroom.js'
@@ -29,7 +26,11 @@ exports.config = {
          joinTo: 'stylesheets/pedalroom.css',
       }
    },
-
+   modules: {
+      autoRequire: {
+         'javascripts/pedalroom.js': ['pedalroom']
+      }
+   },
    server: {
       hostname: '0.0.0.0',
       port: 4444,

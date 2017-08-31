@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
+import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import configureStore from './configure-store';
 import Root from 'containers/root';
 import Home from 'containers/home';
@@ -13,7 +13,7 @@ import Error from 'containers/error';
 document.addEventListener('DOMContentLoaded', () => {
    ReactDOM.render(
       <Provider store={configureStore()}>
-         <Router history={hashHistory}>
+         <Router history={browserHistory}>
             <Route path="/" component={Root}>
                <IndexRedirect to="/home"/>
                <Route path="home" component={Home} />

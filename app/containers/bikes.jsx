@@ -9,7 +9,7 @@ class Bikes extends Component {
       const { dispatch, bikeState } = this.props;
       const bikes = bikeState.get('bikes');
 
-      if(bikes.isEmpty()) {
+      if (bikes.isEmpty()) {
          dispatch(getBikes());
       }
    }

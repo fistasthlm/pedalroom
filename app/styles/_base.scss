@@ -52,7 +52,7 @@ body {
 
 .page-content {
   width: 100%;
-  padding: 10px 2px;
+  padding: 10px 0;
 }
 
 a {
@@ -61,21 +61,6 @@ a {
   :hover {
     text-decoration: none;
   }
-}
-
-.gutter-0.row, .gutter-0.same-height-row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.gutter-0-descendants [class^="col-"], .gutter-0-descendants [class^=" col-"] {
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .ellipsis {

@@ -16,13 +16,21 @@
   }
 
   @include breakpoint(md) {
-    width: 25%;
-    height: 300px;
+    width: 31%;
+    height: 370px;
   }
 
   &__image {
     text-align: center;
     min-height: 75%;
+
+    @include breakpoint(sm) {
+      min-height: 79%;
+    }
+
+    @include breakpoint(md) {
+      min-height: 83%;
+    }
   }
 
   &__picture {

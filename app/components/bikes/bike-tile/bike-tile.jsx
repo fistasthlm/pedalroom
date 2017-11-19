@@ -7,6 +7,7 @@ import Image from '../../viewHelper/image';
 
 export default function BikeTile({ bike }) {
    const hasImage = bike.get('images').first();
+
    return (
       <div className="bike-tile">
          <Link to={`/bike/${bike.get('_id')}`}>
@@ -15,22 +16,21 @@ export default function BikeTile({ bike }) {
                   hasImage &&
                      <Image
                         url={hasImage.get('url')}
-                        className="tile-picture"
+                        className="bike-tile__picture"
                         resize={true}
                         width="260"
-                        height="260"/>
+                        height="260"
+                        caption={bike.get('title')} />
                }
 
             </div>
             <div className="bike-tile__title ellipsis">
                {bike.get('title')}
+                <InstagramLink
+                    handle={bike.get('instagram')}
+                    className="bike-tile__instagram-link" />
             </div>
          </Link>
-         <div>
-            <InstagramLink
-               handle={bike.get('instagram')}
-               className="bike-tile__instagram-link" />
-         </div>
       </div>
    );
 }

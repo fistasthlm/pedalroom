@@ -7,12 +7,12 @@
   margin-bottom: 10px;
 
   @include breakpoint(xxxs) {
-    height: 230px;
+    height: 250px;
   }
 
   @include breakpoint(sm) {
     width: 30%;
-    height: 280px;
+    height: 300px;
   }
 
   @include breakpoint(md) {
@@ -21,19 +21,19 @@
   }
 
   &__image {
-    margin: 0 auto;
     text-align: center;
+    min-height: 80%;
+  }
 
-    img {
-      width: 99%;
-      height: auto;
-    }
+  &__picture {
+    width: 99%;
+    height: auto;
   }
 
   &__title {
     font-size: 14px;
     color: white;
-    max-width: 150px;
+    width: 100%;
     margin-bottom: 10px;
     padding-top: 10px;
   }
@@ -41,7 +41,8 @@
   &__instagram-link {
     font-size: 12px;
     display: block;
+    margin-top: 5px;
     color: white;
-    float: right;
+    text-align: right;
   }
 }

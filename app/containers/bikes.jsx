@@ -23,9 +23,7 @@ class Bikes extends Component {
       }
 
       return(
-         <div>
             <BikeGrid bikes={bikes} />
-         </div>
       );
    }
 }

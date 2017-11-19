@@ -5,7 +5,7 @@ import BikeTile from './bike-tile';
 
 export default function BikeGrid ({ bikes }) {
    return(
-      <div className="bike-grid row gutter-0">
+      <div className="bike-grid">
          {
             bikes.size > 0 &&
                bikes.map(bike => {

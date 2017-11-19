@@ -8,7 +8,7 @@ import Image from '../viewHelper/image';
 export default function BikeTile({ bike }) {
    const hasImage = bike.get('images').first();
    return (
-      <div className="bike-tile col-6 col-sm-4 col-md-4 col-lg-4">
+      <div className="bike-tile">
          <Link to={'/bike/' + bike.get('_id')}>
             <div className="bike-image">
                {

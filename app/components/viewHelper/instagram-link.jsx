@@ -16,5 +16,5 @@ export default function InstagramLink({ handle, className }) {
 
 InstagramLink.propTypes = {
    handle: PropTypes.string.isRequired,
-   className: PropTypes.string.isRequired,
+   className: PropTypes.string,
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import BikeGrid from '../components/bikes/bike-grid';
+import BikeGrid from '../components/bikes/bike-grid/bike-grid';
 import Loader from '../components/viewHelper/loader';
 import { getBikes } from '../actions/bike-actions';
 
@@ -23,9 +23,7 @@ class Bikes extends Component {
       }
 
       return(
-         <div>
             <BikeGrid bikes={bikes} />
-         </div>
       );
    }
 }

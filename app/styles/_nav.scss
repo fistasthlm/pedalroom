@@ -1,11 +1,12 @@
 .nav-content {
-  padding: 10px;
+  padding: 20px 10px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   .left-div {
-    float: left !important;
     display: inline-block;
-    height: 20px;
-
+    margin-left: 5px;
 
     @include breakpoint(sm) {
       width: 20%;
@@ -19,23 +20,20 @@
   }
 
   .right-div {
-    float: right !important;
-    height: 20px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 30px;
 
     @include breakpoint(sm) {
       width: 20%;
     }
 
     .hamburger-button {
-      margin-top: 3px;
-
       @include breakpoint(sm) {
         display: none;
       }
 
       .toggle-button {
-        font-size: 20px;
-        line-height: 20px;
         border: none;
         background-color: black;
 

@@ -10,6 +10,9 @@ export default class Navbar extends PureComponent {
       this.state = {
          menuToggled: false,
       };
+
+      this.toggleMenu = this.toggleMenu.bind(this);
+      this.closeHamburgerMenu = this.closeHamburgerMenu.bind(this);
    }
 
    toggleMenu() {
@@ -31,7 +34,7 @@ export default class Navbar extends PureComponent {
    render() {
       return (
          <div className="nav-content">
-            <div className="left-div" onClick={this.closeHamburgerMenu.bind(this)}>
+            <div className="left-div" onClick={this.closeHamburgerMenu}>
                <Link to="/home">
                   <Image
                      url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
@@ -42,7 +45,7 @@ export default class Navbar extends PureComponent {
                </Link>
             </div>
             <div className="right-div">
-               <Hamburger toggleMenu={this.toggleMenu.bind(this)}/>
+               <Hamburger toggleMenu={this.toggleMenu}/>
             </div>
             <div className="navbar">
                <Link activeClassName="active" className="nav-item" to="/home">Home</Link>
@@ -54,7 +57,7 @@ export default class Navbar extends PureComponent {
                   <div className="menu-item">
                      <Link activeClassName="active"
                            className="nav-item"
-                           onClick={this.toggleMenu.bind(this)}
+                           onClick={this.toggleMenu}
                            to="/home">
                         Home
                      </Link>
@@ -62,7 +65,7 @@ export default class Navbar extends PureComponent {
                   <div className="menu-item">
                      <Link activeClassName="active"
                            className="nav-item"
-                           onClick={this.toggleMenu.bind(this)}
+                           onClick={this.toggleMenu}
                            to="/bikes">
                         Bikes
                      </Link>
@@ -70,7 +73,7 @@ export default class Navbar extends PureComponent {
                   <div className="menu-item">
                      <Link activeClassName="active"
                            className="nav-item"
-                           onClick={this.toggleMenu.bind(this)}
+                           onClick={this.toggleMenu}
                            to="/merch">
                         For sale
                      </Link>

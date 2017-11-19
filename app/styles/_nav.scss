@@ -25,7 +25,7 @@
     margin-right: 30px;
 
     @include breakpoint(sm) {
-      width: 20%;
+      display: none;
     }
 
     .hamburger-button {
@@ -79,11 +79,13 @@
 
   .navbar {
     display: none;
-    overflow: auto;
-    padding-top: 5px;
 
     @include breakpoint(sm) {
-      display: inline-block;
+      display: inline-flex;
+      overflow: auto;
+      padding-top: 5px;
+      margin-left: 95px;
+      margin-right: auto;
     }
   }
 
@@ -97,6 +99,7 @@
     color: white;
     font-size: 16px;
     padding: 5px;
+    margin: 0 10px;
 
     @include breakpoint(sm) {
       font-size: 20px;

@@ -6,26 +6,34 @@
   .bike-tile {
     width: 45%;
     height: 210px;
-    padding: 15px 5px 5px;
+    padding: 10px 5px 5px;
     box-shadow: inset 0 0 5px white;
     border-radius: 3px;
 
     @include breakpoint(sm) {
       width: 30%;
+      height: 280px;
+    }
+
+    @include breakpoint(md) {
+      width: 25%;
+      height: 300px;
     }
 
     .bike-image {
       margin: 0 auto;
       text-align: center;
-      width: 130px;
-      height: 130px;
 
       img {
-        width: 130px;
+        width: 140px;
         height: auto;
 
+        @include breakpoint(sm) {
+          width: 220px;
+        }
+
         @include breakpoint(md) {
-          width: 135px;
+          width: 235px;
         }
       }
     }

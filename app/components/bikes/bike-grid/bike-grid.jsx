@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
-import BikeTile from './bike-tile';
+import BikeTile from '../bike-tile/bike-tile';
 
 export default function BikeGrid ({ bikes }) {
    return(

@@ -4,5 +4,7 @@
 @import "nav";
 @import "home";
 @import "bikes";
+@import "../components/bikes/bike-grid/_bike-grid.scss";
+@import "../components/bikes/bike-tile/_bike-tile.scss";
 @import "error";
 @import "loader";

@@ -1,0 +1,47 @@
+.bike-tile {
+  width: 45%;
+  height: 210px;
+  padding: 10px 5px 5px;
+  box-shadow: inset 0 0 5px white;
+  border-radius: 3px;
+  margin-bottom: 10px;
+
+  @include breakpoint(xxxs) {
+    height: 230px;
+  }
+
+  @include breakpoint(sm) {
+    width: 30%;
+    height: 280px;
+  }
+
+  @include breakpoint(md) {
+    width: 25%;
+    height: 300px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      width: 99%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    color: white;
+    max-width: 150px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  &__instagram-link {
+    font-size: 12px;
+    display: block;
+    color: white;
+    float: right;
+  }
+}

@@ -1,16 +1,19 @@
 import { combineReducers } from 'redux';
-import Immutable from 'immutable';
+import { fromJS } from 'immutable';
 
 import { BIKE_LOADED, BIKES_LOADED, CLEAR_BIKE } from './actions/bike-actions';
 
-function appState(state = Immutable.Map(), action = null) {
+function appState(state = fromJS({}), action = null) {
    switch (action.type) {
       default:
          return state;
    }
 }
 
-function bikeState(state = Immutable.Map({}), action = null) {
+function bikeState(state = fromJS({
+   bikes: {},
+   bike: {}
+}), action = null) {
    switch (action.type) {
       case BIKES_LOADED:
          return state.merge({bikes: action.bikes});

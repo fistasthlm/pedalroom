@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BikeGrid from '../components/bikes/bike-grid';
+import Loader from '../components/viewHelper/loader';
 import { getBikes } from '../actions/bike-actions';
 
 class Bikes extends Component {
@@ -8,7 +9,7 @@ class Bikes extends Component {
       const { dispatch, bikeState } = this.props;
       const bikes = bikeState.get('bikes');
 
-      if(!bikes) {
+      if(bikes.isEmpty()) {
          dispatch(getBikes());
       }
    }
@@ -16,12 +17,14 @@ class Bikes extends Component {
    render() {
       const { bikeState } = this.props;
       const bikes = bikeState.get('bikes');
+
+      if (bikes.isEmpty()) {
+         return <Loader />;
+      }
+
       return(
          <div>
-            {
-               bikes &&
-                  <BikeGrid bikes={bikes} />
-            }
+            <BikeGrid bikes={bikes} />
          </div>
       );
    }

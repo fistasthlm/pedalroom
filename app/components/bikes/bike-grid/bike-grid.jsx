@@ -10,8 +10,9 @@ export default function BikeGrid({bikes}) {
                 bikes.size > 0 &&
                 bikes.map(bike => {
                     return (
-                        <BikeTile key={bike.get('_id')}
-                                     bike={bike} />
+                        <BikeTile
+                            key={bike.get('_id')}
+                            bike={bike} />
                     );
                 })
             }

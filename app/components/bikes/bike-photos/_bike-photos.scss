@@ -7,12 +7,16 @@
         height: auto;
         vertical-align: top;
 
-        &--thumbnails {
-            width: calc(100% - 70px);
-        }
-
         @include breakpoint(sm) {
             width: 70%;
+        }
+
+        &--thumbnails {
+            width: calc(100% - 70px);
+
+            @include breakpoint(sm) {
+                width: calc(100% - 130px);
+            }
         }
     }
 
@@ -30,11 +34,11 @@
         }
 
         &:last-child {
-          margin: 5px 0 0 0;
+            margin: 5px 0 0 0;
         }
 
         @include breakpoint(sm) {
-        width: 120px;
+            width: 120px;
         }
     }
 }

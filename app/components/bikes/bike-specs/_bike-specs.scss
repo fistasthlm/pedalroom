@@ -1,6 +1,6 @@
 .bike-specs {
     @include breakpoint(sm) {
-        width: 70%;
+        width: 100%;
     }
 
     &__property-group {

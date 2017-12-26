@@ -7,10 +7,6 @@
         height: auto;
         vertical-align: top;
 
-        @include breakpoint(sm) {
-            width: 70%;
-        }
-
         &--thumbnails {
             width: calc(100% - 70px);
 

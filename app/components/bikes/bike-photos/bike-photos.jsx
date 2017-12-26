@@ -26,7 +26,7 @@ export default class BikePhotos extends PureComponent {
                                     url={image.get('url')}
                                     resize={true}
                                     width="300"
-                                    height="300" />
+                                    height="300"/>
                             </div>
                         );
                     })
@@ -46,7 +46,7 @@ export default class BikePhotos extends PureComponent {
         const { photoIndex } = this.state;
 
         this.setState({
-            photoIndex: (photoIndex + images.length - 1) % images.length,
+            photoIndex: (photoIndex + images.size - 1) % images.size,
         });
     }
 
@@ -55,35 +55,39 @@ export default class BikePhotos extends PureComponent {
         const { photoIndex } = this.state;
 
         this.setState({
-            photoIndex: (photoIndex + 1) % images.length,
+            photoIndex: (photoIndex + 1) % images.size,
         });
+    }
+
+    getPictureClass(images) {
+        return images.size > 1 ? 'bike-photos__big-picture--thumbnails' : 'bike-photos__big-picture';
     }
 
     render() {
         const { images } = this.props;
         const { isOpen, photoIndex } = this.state;
+
         return (
             <div className="bike-photos">
                 {
                     images &&
                         <div onClick={this.toggleLightBox.bind(this)}>
                             <Image
-                                className="bike-photos__big-picture"
+                                className={this.getPictureClass(images)}
                                 url={images.first().get('url')}
-                                resize={true} />
+                                resize={false} />
                             {
-                                images.length > 1 &&
+                                images.size > 1 &&
                                     this.renderThumbnails(images)
                             }
                         </div>
-
                 }
                 {
                     isOpen &&
                         <Lightbox
-                            mainSrc={images[photoIndex].fields.file.url}
-                            nextSrc={images[(photoIndex + 1) % images.length].fields.file.url}
-                            prevSrc={images[(photoIndex + images.length - 1) % images.length].fields.file.url}
+                            mainSrc={images.get(photoIndex).get('url')}
+                            nextSrc={images.get((photoIndex + 1) % images.size).get('url')}
+                            prevSrc={images.get((photoIndex + images.size - 1) % images.size).get('url')}
                             onMovePrevRequest={this.previousImage.bind(this)}
                             onMoveNextRequest={this.nextImage.bind(this)}
                             onCloseRequest={this.toggleLightBox.bind(this)}

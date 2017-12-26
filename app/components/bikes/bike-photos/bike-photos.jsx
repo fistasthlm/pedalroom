@@ -12,6 +12,10 @@ export default class BikePhotos extends PureComponent {
             isOpen: false,
             photoIndex: 0
         };
+
+        this.toggleLightBox = this.toggleLightBox.bind(this);
+        this.nextImage = this.nextImage.bind(this);
+        this.previousImage = this.previousImage.bind(this);
     }
 
     renderThumbnails(images) {
@@ -71,7 +75,7 @@ export default class BikePhotos extends PureComponent {
             <div className="bike-photos">
                 {
                     images &&
-                        <div onClick={this.toggleLightBox.bind(this)}>
+                        <div onClick={this.toggleLightBox}>
                             <Image
                                 className={this.getPictureClass(images)}
                                 url={images.first().get('url')}
@@ -88,9 +92,9 @@ export default class BikePhotos extends PureComponent {
                             mainSrc={images.get(photoIndex).get('url')}
                             nextSrc={images.get((photoIndex + 1) % images.size).get('url')}
                             prevSrc={images.get((photoIndex + images.size - 1) % images.size).get('url')}
-                            onMovePrevRequest={this.previousImage.bind(this)}
-                            onMoveNextRequest={this.nextImage.bind(this)}
-                            onCloseRequest={this.toggleLightBox.bind(this)}
+                            onMovePrevRequest={this.previousImage}
+                            onMoveNextRequest={this.nextImage}
+                            onCloseRequest={this.toggleLightBox}
                             discourageDownloads={true}
                             enableZoom={false} />
                 }

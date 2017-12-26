@@ -5,42 +5,43 @@ import Loader from '../components/viewHelper/loader';
 import { getBike, clearBike } from '../actions/bike-actions';
 
 class Bike extends Component {
-   componentWillMount() {
-       this.loadBike();
-   }
+    componentWillMount() {
+        this.loadBike();
+    }
 
-   componentWillUnmount() {
-      this.props.dispatch(clearBike());
-   }
+    componentWillUnmount() {
+        this.props.dispatch(clearBike());
+    }
 
-   loadBike() {
-       const { dispatch } = this.props;
-       const id = window.location.hash.split('/')[2].split('?')[0];
-       dispatch(getBike(id));
-   }
+    loadBike() {
+        const { dispatch } = this.props;
+        const id = window.location.hash.split('/')[2].split('?')[0];
+        dispatch(getBike(id));
+    }
 
-   render() {
-       const { bikeState } = this.props;
-       const bike = bikeState.get('bike');
+    render() {
+        const { bikeState } = this.props;
+        const bike = bikeState.get('bike');
 
-       if (bike.isEmpty()) {
-           return (
-               <Loader />
-           );
-       }
+        if (bike.isEmpty()) {
+            return (
+                <Loader />
+            );
+        }
 
-       return (
-           <BikeInfo bike={bike} />
-       );
-   }
+        return (
+            <BikeInfo bike={bike} />
+        );
+    }
 }
 
 function propProvider(reduxState) {
-   const { appState, bikeState } = reduxState;
+    const {appState, bikeState} = reduxState;
 
-   return {
-      appState,
-      bikeState
-   };
+    return {
+        appState,
+        bikeState
+    };
 }
+
 export default connect(propProvider)(Bike);

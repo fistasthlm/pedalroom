@@ -1,4 +1,8 @@
 .bike-specs {
+    @include breakpoint(sm) {
+        width: 70%;
+    }
+
     &__property-group {
         display: flex;
         flex-direction: column;
@@ -8,6 +12,7 @@
     }
 
     &__property-group-item {
+        font-size: 13px;
         position: relative;
         display: flex;
         flex-flow: row wrap;

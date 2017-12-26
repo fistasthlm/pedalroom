@@ -3,10 +3,11 @@
 @import "base";
 @import "nav";
 @import "home";
-@import "../components/bikes/bike-grid/_bike-grid.scss";
-@import "../components/bikes/bike-tile/_bike-tile.scss";
-@import "../components/bikes/bike-info/_bike-info.scss";
-@import "../components/bikes/bike-photos/_bike-photos.scss";
-@import "../components/bikes/bike-specs/_bike-specs.scss";
+@import "../components/bikes/bike-grid/bike-grid";
+@import "../components/bikes/bike-tile/bike-tile";
+@import "../components/bikes/bike-info/bike-info";
+@import "../components/bikes/bike-photos/bike-photos";
+@import "../components/bikes/bike-specs/bike-specs";
+@import "../components/bikes/property-item/property-item";
 @import "error";
 @import "loader";

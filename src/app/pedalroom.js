@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import configureStore from './configure-store';
@@ -10,8 +9,8 @@ import Bike from 'containers/bike';
 import Merch from 'containers/merch';
 import Error from 'containers/error';
 
-document.addEventListener('DOMContentLoaded', () => {
-   ReactDOM.render(
+const App = () => {
+    document.addEventListener('DOMContentLoaded', () => (
       <Provider store={configureStore()}>
          <Router history={hashHistory}>
             <Route path="/" component={Root}>
@@ -23,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                <Route path="*" component={Error} status={404} />
             </Route>
          </Router>
-      </Provider>,
-      document.getElementById('app')
-   );
-});
+      </Provider>
+    ));
+};
+
+export default App;

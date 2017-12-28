@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './pedalroom';
+import Pedalroom from './pedalroom';
 
 import { AppContainer } from 'react-hot-loader';
 
@@ -13,10 +13,11 @@ const render = (Component) => {
     );
 };
 
-render(App);
+render(Pedalroom);
 
 if (module.hot) {
-    module.hot.accept('/pedalroom', () => {
-        render(App);
+    module.hot.accept('./pedalroom', () => {
+        const Pedalroom = require('./pedalroom').default;
+        render(Pedalroom);
     });
 }

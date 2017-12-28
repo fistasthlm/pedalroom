@@ -1,29 +1,29 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
+import { Router, Route } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import configureStore from './configure-store';
 import Root from 'containers/root';
 import Home from 'containers/home';
 import Bikes from 'containers/bikes';
 import Bike from 'containers/bike';
 import Merch from 'containers/merch';
-import Error from 'containers/error';
+import './styles/main.scss';
 
-const App = () => {
-    document.addEventListener('DOMContentLoaded', () => (
-      <Provider store={configureStore()}>
-         <Router history={hashHistory}>
-            <Route path="/" component={Root}>
-               <IndexRedirect to="/home"/>
-               <Route path="home" component={Home} />
-               <Route path="bikes" component={Bikes} />
-               <Route path="bike/:bikeId" component={Bike} />
-               <Route path="merch" component={Merch} />
-               <Route path="*" component={Error} status={404} />
-            </Route>
-         </Router>
-      </Provider>
-    ));
-};
+const store = configureStore();
+const history = createBrowserHistory();
+
+const App = () => (
+    <Provider store={store}>
+        <Router history={history}>
+            <Root>
+                <Route path="/" component={Home} />
+                <Route path="/bikes" component={Bikes} />
+                <Route path="/bike/:bikeId" component={Bike} />
+                <Route path="/merch" component={Merch} />
+            </Root>
+        </Router>
+    </Provider>
+);
 
 export default App;

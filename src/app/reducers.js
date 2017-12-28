@@ -21,7 +21,6 @@ function bikeState(state = fromJS({
          return state.merge({bike: action.bike});
       case CLEAR_BIKE:
          return state.merge({bike: {}});
-         break;
       default:
          return state;
    }

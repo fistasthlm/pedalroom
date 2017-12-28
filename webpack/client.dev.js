@@ -30,7 +30,7 @@ module.exports = {
                 },
             },
             {
-                test: /(?!.*\.test)\.js$/,
+                test: /(?!.*\.test)\.(jsx|js)$/,
                 exclude: [/node_modules/, /__tests__/],
                 loader: 'babel-loader',
             },
@@ -77,9 +77,6 @@ module.exports = {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: false
-        }),
-        new webpack.DefinePlugin({
-            'process.env.BROWSER': true
         }),
     ]
 };

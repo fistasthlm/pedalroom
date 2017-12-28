@@ -1,7 +1,7 @@
 import { getAssets } from './assets';
 
-const render = ({ cleintStats }) => (req, res) => {
-    const { scripts, stylesheets } = getAssets(cleintStats);
+const render = ({ clientStats }) => (req, res) => {
+    const { scripts, stylesheets } = getAssets(clientStats);
     res.render('index', {
         scriptSources: scripts,
         styleSources: stylesheets,

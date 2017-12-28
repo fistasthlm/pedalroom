@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Hamburger from 'components/nav/hamburger';
 import Image from 'components/viewHelper/image';
 
@@ -51,19 +51,16 @@ export default class Navbar extends PureComponent {
             </div>
             <div className="navbar">
                <Link
-                  activeClassName="active"
                   className="nav-item"
                   to="/home">
                   Home
                </Link>
                <Link
-                  activeClassName="active"
                   className="nav-item"
                   to="/bikes">
                   Bikes
                </Link>
                <Link
-                  activeClassName="active"
                   className="nav-item"
                   to="/merch">
                   For sale
@@ -73,7 +70,6 @@ export default class Navbar extends PureComponent {
                <div>
                   <div className="menu-item">
                      <Link
-                        activeClassName="active"
                         className="nav-item"
                         onClick={this.toggleMenu}
                         to="/home">
@@ -82,7 +78,6 @@ export default class Navbar extends PureComponent {
                   </div>
                   <div className="menu-item">
                      <Link
-                        activeClassName="active"
                         className="nav-item"
                         onClick={this.toggleMenu}
                         to="/bikes">
@@ -91,7 +86,6 @@ export default class Navbar extends PureComponent {
                   </div>
                   <div className="menu-item">
                      <Link
-                        activeClassName="active"
                         className="nav-item"
                         onClick={this.toggleMenu}
                         to="/merch">

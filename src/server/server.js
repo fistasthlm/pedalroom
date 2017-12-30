@@ -24,7 +24,7 @@ function done() {
     if (!isBuilt) {
         app.listen(port, () => {
             isBuilt = true;
-            console.log(`${new Date().toUTCString()} Noder server is listening to port: ${port}`);
+            console.log(`${new Date().toUTCString()} Node server is listening to port: ${port}`);
         });
     }
 }

@@ -2,14 +2,12 @@ body {
     margin: 0 0 0 0;
     background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Calibri Light", Roboto, sans-serif;
-    font-smoothing: antialiased;
     letter-spacing: 0.02em;
     color: white;
 }
 
 #app {
     width: 100%;
-    height: 100%;
 }
 
 .bg-overlay {
@@ -28,7 +26,6 @@ body {
     margin: 0 auto;
     background: black;
     width: 100%;
-    height: 100%;
     z-index: 2;
 
     @include breakpoint(md) {
@@ -42,7 +39,6 @@ body {
 }
 
 .page-content {
-    width: 100%;
     padding: 10px 0;
 }
 

@@ -17,7 +17,7 @@ const App = () => (
     <Provider store={store}>
         <Router history={history}>
             <Root>
-                <Route path="/" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route path="/bikes" component={Bikes} />
                 <Route path="/bike/:bikeId" component={Bike} />
                 <Route path="/merch" component={Merch} />

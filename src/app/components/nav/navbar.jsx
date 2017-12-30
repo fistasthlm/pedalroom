@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import DesktopNavbar from 'components/nav/desktop-navbar';
+import MobileNavbar from 'components/nav/mobile-navbar';
 import Hamburger from 'components/nav/hamburger';
 import Image from 'components/viewHelper/image';
 
@@ -32,67 +34,30 @@ export default class Navbar extends PureComponent {
    }
 
    render() {
-      return (
+       const logoUrl = 'https://images.contentful.com/' +
+           'x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png';
+       return (
          <div className="nav-content">
             <div
                className="left-div"
                onClick={this.closeHamburgerMenu}>
-               <Link to="/home">
+               <NavLink
+                   to="/"
+                   activeClassName="active">
                   <Image
-                     url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
+                     url={logoUrl}
                      className="logo"
                      resize={true}
                      width="200"
-                     height="80"/>
-               </Link>
+                     height="80" />
+               </NavLink>
             </div>
             <div className="right-div">
-               <Hamburger toggleMenu={this.toggleMenu}/>
+               <Hamburger toggleMenu={this.toggleMenu} />
             </div>
-            <div className="navbar">
-               <Link
-                  className="nav-item"
-                  to="/home">
-                  Home
-               </Link>
-               <Link
-                  className="nav-item"
-                  to="/bikes">
-                  Bikes
-               </Link>
-               <Link
-                  className="nav-item"
-                  to="/merch">
-                  For sale
-               </Link>
-            </div>
+            <DesktopNavbar />
             <div className={this.hamburgerMenuStyle()}>
-               <div>
-                  <div className="menu-item">
-                     <Link
-                        className="nav-item"
-                        onClick={this.toggleMenu}
-                        to="/home">
-                        Home
-                     </Link>
-                  </div>
-                  <div className="menu-item">
-                     <Link
-                        className="nav-item"
-                        onClick={this.toggleMenu}
-                        to="/bikes">
-                        Bikes
-                     </Link>
-                  </div>
-                  <div className="menu-item">
-                     <Link
-                        className="nav-item"
-                        onClick={this.toggleMenu}
-                        to="/merch">
-                        For sale
-                     </Link>
-                  </div>
-               </div>
+                <MobileNavbar toggleMenu={this.toggleMenu} />
             </div>
          </div>
       );

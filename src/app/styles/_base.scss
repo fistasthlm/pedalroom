@@ -8,10 +8,12 @@ body {
 
 #app {
     width: 100%;
+    height: 100%;
 }
 
 .bg-overlay {
     width: 100%;
+    height: 100%;
     display: block;
     background: url(https://cdn.filestackcontent.com/Ud91WG07QfOBBxpEVmm9) no-repeat center center;
     -webkit-background-size: cover;
@@ -26,6 +28,7 @@ body {
     margin: 0 auto;
     background: black;
     width: 100%;
+    height: 100%;
     z-index: 2;
 
     @include breakpoint(md) {

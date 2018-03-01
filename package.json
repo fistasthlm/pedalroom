@@ -9,8 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "NODE_END=development concurrently --kill-others \"nodemon src\"",
-    "fix": "eslint --fix app/.; exit 0"
+    "start": "NODE_ENV=development concurrently --kill-others \"nodemon src\"",
+    "build": "node scripts/build",
+    "test": "jest --config jest.config.json --coverage",
+    "fix": "eslint --fix app/.; exit 0",
+    "start:prod": "node src"
   },
   "engines": {
     "node": "9.x",
@@ -69,6 +72,7 @@
     "react-hot-loader": "^3.1.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^6.0.6",
+    "shelljs": "^0.8.1",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.9.0",

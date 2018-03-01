@@ -48,7 +48,8 @@ module.exports = {
     },
     resolve: {
         modules: [
-            path.join(__dirname, '../', 'src', 'app')
+            path.join(__dirname, '../', 'src', 'app'),
+            'node_modules'
         ]
     },
     plugins: [

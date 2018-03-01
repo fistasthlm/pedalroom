@@ -6,7 +6,7 @@ module.exports = {
     target: 'web',
     devtool: 'cheap-module-eval-source-map',
     entry: [
-        'webpack-hot-middleware/client?path=/__webpack__hmr&timeout=2000&reload=false&quite=false&noInfo=false',
+        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
         'babel-polyfill',
         'react-hot-loader/patch',
         path.resolve(__dirname, '../', 'src', 'app', 'client')

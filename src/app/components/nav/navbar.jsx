@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import DesktopNavbar from 'components/nav/desktop-navbar';
 import MobileNavbar from 'components/nav/mobile-navbar';
 import Hamburger from 'components/nav/hamburger';
 import Image from 'components/viewHelper/image';
 
-export default class Navbar extends PureComponent {
+class Navbar extends PureComponent {
    constructor(props) {
       super(props);
 
@@ -41,9 +41,7 @@ export default class Navbar extends PureComponent {
             <div
                className="left-div"
                onClick={this.closeHamburgerMenu}>
-               <NavLink
-                   to="/"
-                   activeClassName="active">
+               <NavLink to="/">
                   <Image
                      url={logoUrl}
                      className="logo"
@@ -63,3 +61,5 @@ export default class Navbar extends PureComponent {
       );
    }
 }
+
+export default withRouter(Navbar);

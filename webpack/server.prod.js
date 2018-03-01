@@ -23,7 +23,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /(?!.*\.test)\.js$/,
+                test: /(?!.*\.test)\.(jsx|js)?$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
             },
@@ -36,7 +36,7 @@ module.exports = {
     },
     resolve: {
         modules: [
-            path.join(__dirname, '../', 'demo', 'app'),
+            path.join(__dirname, '../', 'src', 'app'),
             'node_modules'
         ]
     },

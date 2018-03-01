@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const BUILT_ASSETS_FOLDER = '/assets/';
+
 module.exports = {
     name: 'client',
     target: 'web',
@@ -15,13 +17,13 @@ module.exports = {
         filename: '[name].js',
         chunkFilename: '[name].js',
         path: path.join(__dirname, '../', 'public', 'client'),
-        publicPath: '/assets/'
+        publicPath: BUILT_ASSETS_FOLDER
     },
     module: {
         rules: [
             {
                 enforce: 'pre',
-                test: /(?!.*\.test)\.js?$/,
+                test: /(?!.*\.test)\.(jsx|js)?$/,
                 loader: 'eslint-loader',
                 exclude: /node_modules/,
                 options: {

@@ -13,7 +13,7 @@ shell.exec('webpack --config webpack/client.prod.js --json > public/stats.client
 
 shell.echo('\nCopying files...');
 shell.cp('public/stats.client.json', 'public/client/stats.client.json');
-shell.cp('app/server/server.js', 'public/server');
-shell.cp('-R', 'app/server/views', 'public/server');
+shell.cp('src/server/server.js', 'public/server');
+shell.cp('-R', 'src/server/views', 'public/server');
 
 shell.echo('\nDone!');

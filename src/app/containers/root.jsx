@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import Nav from './nav';
+import Nav from 'containers/nav';
 import Home from 'containers/home';
 import Bikes from 'containers/bikes';
 import Bike from 'containers/bike';

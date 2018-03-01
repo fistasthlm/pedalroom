@@ -13,18 +13,18 @@ module.exports = {
     devtool: false,
     entry: [
         'babel-polyfill',
-        path.resolve(__dirname, '../', 'demo', 'app', 'client')
+        path.resolve(__dirname, '../', 'src', 'app', 'client')
     ],
     output: {
         filename: '[name].js?v=[chunkhash]',
         chunkFilename: '[name].js?v=[chunkhash]',
-        path: path.join(__dirname, '../', 'dist', 'client'),
+        path: path.join(__dirname, '../', 'public', 'client'),
         publicPath: BUILT_ASSETS_FOLDER
     },
     module: {
         rules: [
             {
-                test: /(?!.*\.test)\.js$/,
+                test: /(?!.*\.test)\.(jsx|js)$/,
                 exclude: [/node_modules/, /__tests__/],
                 use: 'babel-loader'
             },
@@ -38,9 +38,9 @@ module.exports = {
         ]
     },
     resolve: {
+        extensions: ['.js', '.jsx', '.scss'],
         modules: [
-            path.join(__dirname, '../', 'demo', 'app'),
-            path.join(__dirname, '../', 'src'),
+            path.join(__dirname, '../', 'src', 'app'),
             'node_modules'
         ]
     },

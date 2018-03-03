@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
+import { withRouter } from 'react-router-dom';
 import Navbar from 'components/nav/navbar';
 
-export default class Nav extends PureComponent {
+class Nav extends PureComponent {
    constructor(props) {
       super(props);
 
@@ -16,3 +17,5 @@ export default class Nav extends PureComponent {
       );
    }
 }
+
+export default withRouter(Nav);

@@ -5,3 +5,12 @@ node_js:
 cache:
   directories:
     - "node_modules"
+
+after_script:
+  - npm run build
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "b217852b-28d8-4390-9f72-057ded1c3ca8"
+  app: fista-pedalroom

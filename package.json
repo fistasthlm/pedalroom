@@ -11,7 +11,7 @@
   "scripts": {
     "start": "NODE_ENV=development concurrently --kill-others \"nodemon src\"",
     "build": "node scripts/build",
-    "prod": "NODE_ENV=production NODE_PATH=./public/client node --max_old_space_size=900 ../server/server",
+    "prod": "NODE_ENV=production NODE_PATH=./public/client node --max_old_space_size=900 /server/server",
     "test": "jest --config jest.config.json --coverage",
     "fix": "eslint --fix app/.; exit 0",
     "start:prod": "node src"

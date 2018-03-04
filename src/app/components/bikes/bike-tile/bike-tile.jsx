@@ -18,8 +18,7 @@ export default function BikeTile({bike}) {
                             url={hasImage.get('url')}
                             className="bike-tile__picture"
                             resize={true}
-                            width="260"
-                            height="260"
+                            width="500"
                             caption={bike.get('title')} />
                     }
 

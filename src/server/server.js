@@ -1,5 +1,6 @@
 const Express = require('express');
 const compression = require('compression');
+const sslRedirect = require('heroku-ssl-redirect');
 const webpack = require('webpack');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -58,6 +59,7 @@ else {
     const clientStats = require(`${serverOutputhPath}/../stats.client.json`);
     const render = require(`${serverOutputhPath}/render.js`).default;
     app.use(compression());
+    app.use(sslRedirect());
     app.use(publicPath, Express.static(clientOutputPath, { maxAge: '360d' }));
     app.use(render({ clientStats }));
     done();

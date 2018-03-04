@@ -33,7 +33,10 @@ class Navbar extends PureComponent {
     }
 
     hamburgerMenuStyle() {
-        return this.state.menuToggled ? 'hamburger-menu open' : 'hamburger-menu';
+        return this.state.menuToggled ?
+                'hamburger-menu open'
+            :
+                'hamburger-menu';
     }
 
     render() {
@@ -70,11 +73,10 @@ class Navbar extends PureComponent {
                 </div>
                 <DesktopNavbar
                     links={links} />
-                <div className={this.hamburgerMenuStyle()}>
-                    <MobileNavbar
-                        links={links}
-                        toggleMenu={this.toggleMenu} />
-                </div>
+                <MobileNavbar
+                    hamburgerMenuStyle={this.hamburgerMenuStyle()}
+                    links={links}
+                    toggleMenu={this.toggleMenu} />
             </div>
         );
     }

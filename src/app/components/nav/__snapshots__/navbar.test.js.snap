@@ -41,24 +41,21 @@ exports[`Render should render component 1`] = `
       ]
     }
   />
-  <div
-    className="hamburger-menu"
-  >
-    <MobileNavbar
-      links={
-        Immutable.List [
-          Immutable.Map {
-            "to": "/",
-            "route": "Home",
-          },
-          Immutable.Map {
-            "to": "/bikes",
-            "route": "Bikes",
-          },
-        ]
-      }
-      toggleMenu={[Function]}
-    />
-  </div>
+  <MobileNavbar
+    hamburgerMenuStyle="hamburger-menu"
+    links={
+      Immutable.List [
+        Immutable.Map {
+          "to": "/",
+          "route": "Home",
+        },
+        Immutable.Map {
+          "to": "/bikes",
+          "route": "Bikes",
+        },
+      ]
+    }
+    toggleMenu={[Function]}
+  />
 </div>
 `;

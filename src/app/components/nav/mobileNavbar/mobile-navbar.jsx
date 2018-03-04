@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
-export default function MobileNavbar({ links, toggleMenu }) {
+export default function MobileNavbar({ links, toggleMenu, hamburgerMenuStyle }) {
     return (
-        <div>
+        <div className={hamburgerMenuStyle}>
             {
                 links.map((link, index) => {
                     return (

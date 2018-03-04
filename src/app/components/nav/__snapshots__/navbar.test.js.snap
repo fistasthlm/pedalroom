@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render should render component 1`] = `
+<div
+  className="nav-content"
+>
+  <div
+    className="left-div"
+    onClick={[Function]}
+  >
+    <NavLink
+      to="/"
+    >
+      <Image
+        className="logo"
+        height="80"
+        resize={true}
+        url="https://images.contentful.com/x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png"
+        width="200"
+      />
+    </NavLink>
+  </div>
+  <div
+    className="right-div"
+  >
+    <Hamburger
+      toggleMenu={[Function]}
+    />
+  </div>
+  <DesktopNavbar
+    links={
+      Immutable.List [
+        Immutable.Map {
+          "to": "/",
+          "route": "Home",
+        },
+        Immutable.Map {
+          "to": "/bikes",
+          "route": "Bikes",
+        },
+      ]
+    }
+  />
+  <MobileNavbar
+    hamburgerMenuStyle="hamburger-menu"
+    links={
+      Immutable.List [
+        Immutable.Map {
+          "to": "/",
+          "route": "Home",
+        },
+        Immutable.Map {
+          "to": "/bikes",
+          "route": "Bikes",
+        },
+      ]
+    }
+    toggleMenu={[Function]}
+  />
+</div>
+`;

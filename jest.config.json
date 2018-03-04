@@ -1,9 +1,10 @@
 {
   "moduleFileExtensions": [
+    "jsx",
     "js"
   ],
   "roots": ["src"],
-  "modulePaths": ["src/app", "assets"],
+  "modulePaths": ["src/app"],
   "collectCoverageFrom" : ["src/**/*.jsx", "!src/server/mock/**"],
   "moduleDirectories": ["node_modules"],
   "moduleNameMapper": {
@@ -11,6 +12,7 @@
   },
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "setupFiles": [
+    "./scripts/shim.js",
     "./test-setup.js"
   ]
 }

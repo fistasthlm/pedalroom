@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
 import Lightbox from 'react-image-lightbox';
-import Image from '../../viewHelper/image';
+import Image from '../../viewHelper/image/image';
 
 export default class BikePhotos extends PureComponent {
     constructor(props) {

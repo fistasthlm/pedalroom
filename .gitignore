@@ -33,3 +33,7 @@ public/
 .idea/vcs.xml
 
 package-lock.json
+
+
+# Test
+coverage

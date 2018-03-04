@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Map } from 'immutable';
 import InstagramLink from '../../viewHelper/instagram-link';
-import Image from '../../viewHelper/image';
+import Image from '../../viewHelper/image/image';
 
 export default function BikeTile({bike}) {
     const hasImage = bike.get('images').first();

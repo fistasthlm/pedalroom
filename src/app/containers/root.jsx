@@ -4,7 +4,6 @@ import Nav from 'containers/nav';
 import Home from 'containers/home';
 import Bikes from 'containers/bikes';
 import Bike from 'containers/bike';
-import Merch from 'containers/merch';
 
 class Root extends PureComponent {
     render() {
@@ -23,9 +22,6 @@ class Root extends PureComponent {
                         <Route
                             exact path="/bike/:id"
                             component={Bike} />
-                        <Route
-                            exact path="/merch"
-                            component={Merch} />
                     </Switch>
                 </div>
             </div>

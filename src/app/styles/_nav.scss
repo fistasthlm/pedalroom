@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include breakpoint(md) {
+        padding: 30px 10px 10px 20px;
+    }
+
     .left-div {
         display: inline-block;
         margin-left: 5px;

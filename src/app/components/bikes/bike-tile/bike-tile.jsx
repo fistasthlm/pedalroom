@@ -24,9 +24,9 @@ export default function BikeTile({bike}) {
                     }
 
                 </div>
-                <div className="bike-tile__title ellipsis">
+                <h2 className="bike-tile__title ellipsis">
                     {bike.get('title')}
-                </div>
+                </h2>
             </Link>
             <InstagramLink
                 handle={bike.get('instagram')}

@@ -15,7 +15,7 @@ class Bike extends Component {
 
     loadBike() {
         const { dispatch } = this.props;
-        const id = window.location.hash.split('/')[2].split('?')[0];
+        const id = window.location.pathname.split('/')[2].split('?')[0];
         dispatch(getBike(id));
     }
 

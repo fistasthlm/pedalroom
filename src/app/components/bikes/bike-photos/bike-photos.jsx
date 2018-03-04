@@ -40,9 +40,11 @@ export default class BikePhotos extends PureComponent {
     }
 
     toggleLightBox() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
+        if (document.body.clientWidth <= 768) {
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+        }
     }
 
     previousImage() {
@@ -64,7 +66,10 @@ export default class BikePhotos extends PureComponent {
     }
 
     getPictureClass(images) {
-        return images.size > 1 ? 'bike-photos__big-picture--thumbnails' : 'bike-photos__big-picture';
+        return images.size > 1 ?
+                'bike-photos__big-picture--thumbnails'
+            :
+                'bike-photos__big-picture';
     }
 
     render() {

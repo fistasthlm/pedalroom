@@ -10,13 +10,12 @@ class Bike extends Component {
     }
 
     componentWillUnmount() {
-        this.props.dispatch(clearBike());
+        this.props.clearBike();
     }
 
     loadBike() {
-        const { dispatch } = this.props;
         const id = window.location.pathname.split('/')[2].split('?')[0];
-        dispatch(getBike(id));
+        this.props.getBike(id);
     }
 
     render() {
@@ -44,4 +43,7 @@ function propProvider(reduxState) {
     };
 }
 
-export default connect(propProvider)(Bike);
+export default connect(propProvider, {
+    getBike,
+    clearBike,
+})(Bike);

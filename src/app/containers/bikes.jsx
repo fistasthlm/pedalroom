@@ -1,39 +1,36 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import BikeGrid from '../components/bikes/bike-grid/bike-grid';
 import Loader from '../components/viewHelper/loader';
 import { getBikes } from '../actions/bike-actions';
 
-class Bikes extends Component {
-   componentDidMount() {
-      const { dispatch, bikeState } = this.props;
-      const bikes = bikeState.get('bikes');
+class Bikes extends PureComponent {
+    componentDidMount() {
+        if (this.props.bikes.isEmpty()) {
+            this.props.getBikes();
+        }
+    }
 
-      if (bikes.isEmpty()) {
-         dispatch(getBikes());
-      }
-   }
+    render() {
+        const { bikes } = this.props;
 
-   render() {
-      const { bikeState } = this.props;
-      const bikes = bikeState.get('bikes');
+        if (bikes.isEmpty()) {
+            return <Loader />;
+        }
 
-      if (bikes.isEmpty()) {
-         return <Loader />;
-      }
-
-      return(
+        return (
             <BikeGrid bikes={bikes} />
-      );
-   }
+        );
+    }
 }
 
-function propProvider(reduxState) {
-   const { appState, bikeState } = reduxState;
-
-   return {
-      appState,
-      bikeState
-   };
+function propProvider(state) {
+    const {bikesReducer} = state;
+    return {
+        bikes: bikesReducer.get('bikes'),
+    };
 }
-export default connect(propProvider)(Bikes);
+
+export default connect(propProvider, {
+    getBikes,
+})(Bikes);

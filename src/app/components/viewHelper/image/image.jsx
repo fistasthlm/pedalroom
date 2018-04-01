@@ -9,7 +9,8 @@ export default function Image({ url, className, width, height, resize, caption }
 
     if (resize) {
 
-        const transformUrl = `https://process.filestackapi.com/A3BcPUqFURlSDHWjF3UG1z/resize=width:${width}/${url}`;
+        const transformUrl = 'https://process.filestackapi.com/A3BcPUqFURlSDHWjF3UG1z/' +
+        `resize=w:${width}/output=q:85/${url}`;
         return (
             <img
                 className={className}

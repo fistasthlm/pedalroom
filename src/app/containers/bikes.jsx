@@ -25,9 +25,9 @@ class Bikes extends PureComponent {
 }
 
 function propProvider(state) {
-    const {bikesReducer} = state;
+    const { bikeState } = state;
     return {
-        bikes: bikesReducer.get('bikes'),
+        bikes: bikeState.get('bikes'),
     };
 }
 

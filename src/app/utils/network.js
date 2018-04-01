@@ -5,9 +5,10 @@ const instance = axios.create({
 });
 
 export function getApiUrl() {
-   return 'https://fista-cms-api.herokuapp.com/';
-   //return 'http://localhost:3000/';
-
+    return process.env.NODE_ENV !== 'production' ?
+        'http://localhost:3000/'
+        :
+        'https://fista-cms-api.herokuapp.com/';
 }
 
 function getJsonHeaders() {

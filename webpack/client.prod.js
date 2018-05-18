@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const BUILT_ASSETS_FOLDER = '/assets/'
 const extractSass = new ExtractTextPlugin({
-  filename: '[name].[contenthash].css',
+  filename: '[name].[contenthash].css'
 })
 
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
       minimize: true
     }),
     new webpack.DefinePlugin({
-      'process.env.BROWSER': true,
+      'process.env.BROWSER': true
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {

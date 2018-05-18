@@ -12,7 +12,7 @@ module.exports = {
   target: 'node',
   node: {
     __dirname: false,
-    __filename: false,
+    __filename: false
   },
   devtool: 'eval',
   entry: [entry],
@@ -31,7 +31,7 @@ module.exports = {
         options: {
           failOnWarning: false,
           failOnError: true
-        },
+        }
       },
       {
         test: /(?!.*\.test)\.js$/,

@@ -12,7 +12,7 @@ module.exports = {
   target: 'node',
   node: {
     __dirname: false,
-    __filename: false,
+    __filename: false
   },
   entry: [entry],
   output: {
@@ -25,12 +25,12 @@ module.exports = {
       {
         test: /(?!.*\.test)\.(jsx|js)?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'ignore-loader',
+        loader: 'ignore-loader'
       }
     ]
   },
@@ -49,7 +49,7 @@ module.exports = {
       NODE_ENV: 'production'
     }),
     new webpack.DefinePlugin({
-      'process.env.BROWSER': false,
-    }),
+      'process.env.BROWSER': false
+    })
   ]
 }

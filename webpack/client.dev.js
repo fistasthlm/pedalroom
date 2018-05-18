@@ -29,19 +29,19 @@ module.exports = {
         options: {
           failOnWarning: false,
           failOnError: true
-        },
+        }
       },
       {
         test: /(?!.*\.test)\.(jsx|js)$/,
         exclude: [/node_modules/, /__tests__/],
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader',
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader',
@@ -79,6 +79,6 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: false
-    }),
+    })
   ]
 }

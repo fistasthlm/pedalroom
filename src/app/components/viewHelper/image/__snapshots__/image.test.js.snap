@@ -5,4 +5,4 @@ exports[`Render should render component 1`] = `
   alt=""
   src="https//placekitten.com/500/500"
 />
-`;
+`

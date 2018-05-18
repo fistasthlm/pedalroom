@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import ErrorPage from 'components/error/error-page';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import ErrorPage from 'components/error/error-page'
 
 class Error extends Component {
-   render() {
-      return(
-         <ErrorPage />
-      );
-   }
+  render () {
+    return (
+      <ErrorPage />
+    )
+  }
 }
 
-function propProvider(reduxState) {
-   const { appState } = reduxState;
+function propProvider (reduxState) {
+  const { appState } = reduxState
 
-   return {
-      appState
-   };
+  return {
+    appState
+  }
 }
 
-export default connect(propProvider)(Error);
+export default connect(propProvider)(Error)

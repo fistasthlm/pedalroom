@@ -1,85 +1,84 @@
-import React, { PureComponent } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
-import { Map, List } from 'immutable';
-import DesktopNavbar from 'components/nav/desktopNavbar/desktop-navbar';
-import MobileNavbar from 'components/nav/mobileNavbar/mobile-navbar';
-import Hamburger from 'components/nav/hamburger/hamburger';
-import Image from 'components/viewHelper/image/image';
+import React, { PureComponent } from 'react'
+import { NavLink, withRouter } from 'react-router-dom'
+import { Map, List } from 'immutable'
+import DesktopNavbar from 'components/nav/desktopNavbar/desktop-navbar'
+import MobileNavbar from 'components/nav/mobileNavbar/mobile-navbar'
+import Hamburger from 'components/nav/hamburger/hamburger'
+import Image from 'components/viewHelper/image/image'
 
 class Navbar extends PureComponent {
-    constructor(props) {
-        super(props);
+  constructor (props) {
+    super(props)
 
-        this.state = {
-            menuToggled: false,
-        };
-
-        this.toggleMenu = this.toggleMenu.bind(this);
-        this.closeHamburgerMenu = this.closeHamburgerMenu.bind(this);
+    this.state = {
+      menuToggled: false
     }
 
-    toggleMenu() {
-        this.setState((prevState) => {
-            return {
-                menuToggled: !prevState.menuToggled
-            };
-        });
-    }
+    this.toggleMenu = this.toggleMenu.bind(this)
+    this.closeHamburgerMenu = this.closeHamburgerMenu.bind(this)
+  }
 
-    closeHamburgerMenu() {
-        this.setState({
-            menuToggled: false
-        });
-    }
+  toggleMenu () {
+    this.setState((prevState) => {
+      return {
+        menuToggled: !prevState.menuToggled
+      }
+    })
+  }
 
-    hamburgerMenuStyle() {
-        return this.state.menuToggled ?
-                'hamburger-menu open'
-            :
-                'hamburger-menu';
-    }
+  closeHamburgerMenu () {
+    this.setState({
+      menuToggled: false
+    })
+  }
 
-    render() {
-        const logoUrl = 'https://images.contentful.com/' +
-            'x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png';
+  hamburgerMenuStyle () {
+    return this.state.menuToggled
+      ? 'hamburger-menu open'
+      : 'hamburger-menu'
+  }
 
-        const links = List([
-            Map({
-                to: '/',
-                route: 'Home',
-            }),
-            Map({
-                to: '/bikes',
-                route: 'Bikes',
-            }),
-        ]);
+  render () {
+    const logoUrl = 'https://images.contentful.com/' +
+            'x1j0zkbk3421/4wgAQ4qPFKIyyeoUImGYko/66256a7ec6c12ea8f8d1d88bbcafe6ea/fistasthlm-logotype.png'
 
-        return (
-            <div className="nav-content">
-                <div
-                    className="left-div"
-                    onClick={this.closeHamburgerMenu}>
-                    <NavLink to="/">
-                        <Image
-                            url={logoUrl}
-                            className="logo"
-                            resize={true}
-                            width="200"
-                            height="80" />
-                    </NavLink>
-                </div>
-                <div className="right-div">
-                    <Hamburger toggleMenu={this.toggleMenu} />
-                </div>
-                <DesktopNavbar
-                    links={links} />
-                <MobileNavbar
-                    hamburgerMenuStyle={this.hamburgerMenuStyle()}
-                    links={links}
-                    toggleMenu={this.toggleMenu} />
-            </div>
-        );
-    }
+    const links = List([
+      Map({
+        to: '/',
+        route: 'Home'
+      }),
+      Map({
+        to: '/bikes',
+        route: 'Bikes'
+      })
+    ])
+
+    return (
+      <div className='nav-content'>
+        <div
+          className='left-div'
+          onClick={this.closeHamburgerMenu}>
+          <NavLink to='/'>
+            <Image
+              url={logoUrl}
+              className='logo'
+              resize
+              width='200'
+              height='80' />
+          </NavLink>
+        </div>
+        <div className='right-div'>
+          <Hamburger toggleMenu={this.toggleMenu} />
+        </div>
+        <DesktopNavbar
+          links={links} />
+        <MobileNavbar
+          hamburgerMenuStyle={this.hamburgerMenuStyle()}
+          links={links}
+          toggleMenu={this.toggleMenu} />
+      </div>
+    )
+  }
 }
 
-export default withRouter(Navbar);
+export default withRouter(Navbar)

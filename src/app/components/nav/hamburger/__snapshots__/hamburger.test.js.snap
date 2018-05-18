@@ -20,4 +20,4 @@ exports[`Render should render component 1`] = `
     />
   </button>
 </div>
-`;
+`

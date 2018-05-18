@@ -58,4 +58,4 @@ exports[`Render should render component 1`] = `
     toggleMenu={[Function]}
   />
 </div>
-`;
+`

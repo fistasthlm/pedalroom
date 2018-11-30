@@ -10,6 +10,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
   name: 'client',
   target: 'web',
+  mode: 'production',
   devtool: false,
   entry: [
     'babel-polyfill',

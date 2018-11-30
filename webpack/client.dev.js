@@ -6,6 +6,7 @@ const BUILT_ASSETS_FOLDER = '/assets/'
 module.exports = {
   name: 'client',
   target: 'web',
+  mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
@@ -67,11 +68,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: '[name].js',
-      minChunks: Infinity
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.EnvironmentPlugin({

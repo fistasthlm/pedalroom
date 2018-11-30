@@ -35,7 +35,7 @@ class Bike extends Component {
 }
 
 function propProvider (reduxState) {
-  const {appState, bikeState} = reduxState
+  const { appState, bikeState } = reduxState
 
   return {
     appState,

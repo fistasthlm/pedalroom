@@ -5,7 +5,7 @@ import { Map } from 'immutable'
 import InstagramLink from '../../viewHelper/instagram-link'
 import Image from '../../viewHelper/image/image'
 
-export default function BikeTile ({bike}) {
+export default function BikeTile ({ bike }) {
   const hasImage = bike.get('images').first()
 
   return (

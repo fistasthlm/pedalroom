@@ -5,9 +5,7 @@ const instance = axios.create({
 })
 
 export function getApiUrl () {
-  return process.env.NODE_ENV !== 'production'
-    ? 'http://localhost:3000/'
-    : 'https://fista-cms-api.herokuapp.com/'
+  return 'https://fista-cms-api.herokuapp.com/'
 }
 
 function getJsonHeaders () {

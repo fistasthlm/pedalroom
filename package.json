@@ -18,8 +18,8 @@
     "start:prod": "node src"
   },
   "engines": {
-    "node": "9.x",
-    "npm": "5.x"
+    "node": "10.x",
+    "npm": "6.x"
   },
   "dependencies": {
     "autoprefixer": "~9.1.5",

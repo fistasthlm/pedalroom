@@ -10,6 +10,7 @@ const output = res('../public/server')
 module.exports = {
   name: 'server',
   target: 'node',
+  mode: 'development',
   node: {
     __dirname: false,
     __filename: false

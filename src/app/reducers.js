@@ -16,11 +16,11 @@ function bikeState (state = fromJS({
 }), action = null) {
   switch (action.type) {
     case BIKES_LOADED:
-      return state.merge({bikes: action.bikes})
+      return state.merge({ bikes: action.bikes })
     case BIKE_LOADED:
-      return state.merge({bike: action.bike})
+      return state.merge({ bike: action.bike })
     case CLEAR_BIKE:
-      return state.merge({bike: {}})
+      return state.merge({ bike: {} })
     default:
       return state
   }
